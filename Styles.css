@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/*PARA LOS FONDOS*/
+.fondo{
+    background-image: url(img/b.jpg);
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fondo5{
+    background-color: bisque
+}
+/*ESTOS SON ESTILOS PARA LA POSICIÓN DE LAS IMAGENES*/
+.map { 
+    margin:20px;
+	float:left;
+}
+.map2 { 
+    margin:20px;
+	float:right;
+}
+.map3{
+    margin:auto;
+    margin-top: 25px;
+    max-width:400px;
+	vertical-align: middle;
+}
+
+/*ESTILOS DE LOS TITULOS*/
+h1{
+	font-family: url(fonts/AncizarSans-Extrabold_02042016.otf);
+	color:#000000;
+	font-size: 72px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px #000000;
+	text-align: center;
+	max-width: 640px;
+	margin:auto;
+	margin-bottom:10px;
+} 
+h2{
+	font-family: url(fonts/AncizarSans-Extrablack_02042016.otf);
+	color:gold;
+	font-size: 40px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px #000000;
+	text-align: center;
+	max-width: 640px;
+	margin:auto;
+    margin-top: 20px;
+	margin-bottom:20px;
+} 
+
+/*ESTILOS DE TEXTOS*/
+.contenido2 {
+	position: relative;
+	left: 10px;
+    margin: auto;
+}
+.texto {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 22px;
+	font-style: normal;
+	text-align: justify;
+	min-width:200px;
+    max-width:400px;
+    margin:20px;
+    background-color: bisque;
+    opacity: 0.8;
+	float:left;
+}
+.texto2 {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 22px;
+	font-style: normal;
+	text-align: justify;
+	min-width:200px;
+    max-width:400px;
+	margin:auto;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+.texto3 {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 22px;
+	font-style: normal;
+	text-align: justify;
+	min-width:screen;
+    max-width:screen;
+    height: 200px;
+	margin:auto;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+}
+.textof {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 22px;
+	font-style: normal;
+	text-align: justify;
+	min-width:screen;
+    max-width:screen;
+    height: 50px;
+    position:absolute;
+    bottom:0;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+}
+.textoR {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 22px;
+	font-style: normal;
+	text-align: justify;
+	min-width:400px;
+    max-width:720px;
+	margin:auto;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+
+/*ESTILOS PARA LOS ENLACES*/
+
+/*  link */
+a:any-link {
+	color: #f30000;
+	text-decoration:none;
+}
+/* mouse sobre link */
+a:hover {
+    color: blue;
+    text-decoration:none;
+}
+/*link seleccionado */
+a:active {
+    color: blue;
+    text-decoration:none;
+}
+
+/*ESTILOS DEL MENU*/
+.menunav {
+	left:10px;
+    width: 960px;
+    align:center;
+	margin:auto;
+}
+
+/*ESTILOS DE LOS BOTONES*/
+.boton1:any-link {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 20px;
+	font-style: normal;
+    color: black;
+	font-weight: normal;
+	text-align: center;
+    vertical-align: center;
+	width: 160px;
+    height: 30px;
+    margin-right: 5px;
+	background-color: #FFFFFF;
+	padding:0px 0px 0px 0px;
+	float: left;
+}
+.boton1:hover {
+	color:black;	
+	background-image: url(img/button1.jpg);
+	cursor:pointer;
+}
+
+.botonMapa:any-link {
+    font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;	
+	text-align: center;
+	width: 76px;
+    height: 90px;
+	background-image: url(img/map.png);
+	padding:0px 0px 0px 0px;
+	float: left;
+}
+.botonMapa: hover {
+    color:#FFFFFF;
+    text-shadow: 1px 1px #000000;
+    background-image: : url(img/map1.png);
+    cursor: pointer;
+}
+
+/*DISEÑO ADAPTATIVO*/
+@media only screen and (max-width: 616px) {
+    .menunav {
+        min-width:515px;
+        max-width:515px;
+        }
+}
+@media only screen and (max-width: 515px) {
+    .menunav {
+        min-width:414px;
+        max-width:414px;
+        }
+}
+@media only screen and (max-width: 800px) {
+    .fondo{
+        background-image: url(img/bg.jpg);
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .map {
+        float:left;
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .map3 {
+        float:left;
+    }
+}//
+.mapaPhaser{	
+		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
+	     margin: -10px;
+		 } 
+
+@media only screen and (min-width: 720px) {  /* Si la pantalla es mayor a 720px muestra el texto a la derecha */	
+	.mapaPhaser{	
+	     margin: auto;
+	     width: 720px;
+		 } 
