@@ -2,6 +2,7 @@
 /*PARA LOS FONDOS*/
 .fondo{
     background-color: whitesmoke;
+    background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
     min-height: 100%;
     min-width: 100%;
     width: 100%;
@@ -14,15 +15,14 @@
     margin:20px;
 	float:left;
 }
-.map2 { 
-    margin:20px;
-	float:right;
+.logoF{
+    margin-left: 60px;
+    float: right;
 }
-.map3{
-    margin:auto;
-    margin-top: 25px;
-    max-width:400px;
-	vertical-align: middle;
+.footerIcons{
+    margin-right: 50px;
+    float: left;
+    vertical-align: middle;
 }
 
 /*ESTILOS DE LOS TITULOS*/
@@ -51,6 +51,20 @@ h2{
     margin-top: 20px;
 	margin-bottom:20px;
 } 
+
+/*Footer*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #565A5C;
+    text-align: center;
+	font-family: url(fonts/AncizarSans-Regular_02042016.otf);
+    color: white;
+	font-size: 18px;
+	font-style: normal;
+}
 
 /*ESTILOS DE TEXTOS*/
 .contenido2 {
@@ -93,19 +107,6 @@ h2{
     background-color: #FFFFFF;
     opacity: 0.7;
 }
-.textof {
-	font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 22px;
-	font-style: normal;
-	text-align: justify;
-	min-width:screen;
-    height: 200px;
-    position:absolute;
-    bottom:-50px;
-    left: 0px;
-    background-color: orange;
-    background-size: cover;
-}
 .textoR {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
 	font-size: 22px;
@@ -127,7 +128,7 @@ a:any-link {
 }
 /* mouse sobre link */
 a:hover {
-    color: gray;
+    color: #565A5C;
     text-decoration:none;
 }
 /*link seleccionado */
@@ -144,7 +145,37 @@ a:active {
 	margin:auto;
 }
 
+.menuIndex {
+    width: 470px;
+    align:center;
+    vertical-align: center;
+	margin:auto;
+}
+
+
 /*ESTILOS DE LOS BOTONES*/
+
+.buttonIndex:any-link {
+	font-family: url(fonts/AncizarSans-Black_02042016.otf);
+	font-size: 20px;
+	font-style: normal;
+    color: black;
+	font-weight: normal;
+	text-align: center;
+	width: 160px;
+    height: 92px;
+    margin-left: 50px;
+    margin-top: 150px;
+	background-image: url(img/button1.png);
+	padding:0px 0px 0px 0px;
+	float: left;
+}
+.buttonIndex:hover {
+	color:white;	
+	background-image: url(img/button1h.png);
+	cursor:pointer;
+}
+
 .boton1:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
 	font-size: 20px;
