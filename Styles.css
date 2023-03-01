@@ -51,17 +51,11 @@ h2{
 
 /*Footer*/
 .footer {
-    position: fixed;
+    position:absolute;
     left: 0;
     bottom: 0;
     width: 100vw;
-    height: 15vh;
     background-color: #565A5C;
-    text-align: center;
-	font-family: url(fonts/AncizarSans-Regular_02042016.otf);
-    color: white;
-	font-size: 18px;
-	font-style: normal;
 }
 
 /*ESTILOS DE TEXTOS*/
