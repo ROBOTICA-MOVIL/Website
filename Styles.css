@@ -51,10 +51,10 @@ h2{
 
 /*Footer*/
 .footer {
-    position:absolute;
+    position:fixed;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #565A5C;
 }
 
@@ -224,7 +224,7 @@ a:active {
 }
 @media only screen and (max-width: 800px) {
     .fondo{
-        background-image: url(img/bg.jpg);
+        background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
         width: 100%;
         height: auto;
     }
