@@ -13,11 +13,11 @@
 	float:left;
 }
 .logoF{
-    margin-left: 3%;
+    margin-left: 4vw;
     float: right;
 }
 .footerIcons{
-    margin-right: 3%;
+    margin-right: 3vw;
     float: left;
     vertical-align: middle;
 }
@@ -54,8 +54,8 @@ h2{
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 15%;
+    width: 100vw;
+    height: 15vh;
     background-color: #565A5C;
     text-align: center;
 	font-family: url(fonts/AncizarSans-Regular_02042016.otf);
@@ -163,7 +163,7 @@ a:active {
 	width: 160px;
     height: 92px;
     margin-left: 50px;
-    margin-top: 30%;
+    margin-top: 20vh;
 	background-image: url(img/button1.png);
 	padding:0px 0px 0px 0px;
 	float: left;
