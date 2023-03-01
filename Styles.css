@@ -3,8 +3,6 @@
 .fondo{
     background-color: whitesmoke;
     background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
-    min-height: 100%;
-    min-width: 100%;
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
