@@ -37,11 +37,9 @@ h1{
 } 
 h2{
 	font-family: url(fonts/AncizarSans-Extrablack_02042016.otf);
-	color:gold;
+	color:#000000;
 	font-size: 40px;
-	font-weight: bold;
 	text-decoration: none;
-	text-shadow: 1px 1px #000000;
 	text-align: center;
 	max-width: 640px;
 	margin:auto;
@@ -50,12 +48,18 @@ h2{
 } 
 
 /*Footer*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .footer {
-    position:fixed;
-    left: 0;
+    /*left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100%;*/
+    margin-top: auto;
     background-color: #565A5C;
+    /*position:absolute;*/
 }
 
 /*ESTILOS DE TEXTOS*/
@@ -132,7 +136,7 @@ a:active {
 /*ESTILOS DEL MENU*/
 .menunav {
 	left:10px;
-    width: 960px;
+    width: 825px;
     align:center;
 	margin:auto;
 }
@@ -140,7 +144,6 @@ a:active {
 .menuIndex {
     width: 470px;
     align:center;
-    vertical-align: center;
 	margin:auto;
 }
 
@@ -157,7 +160,7 @@ a:active {
 	width: 160px;
     height: 92px;
     margin-left: 50px;
-    margin-top: 20vh;
+    margin-top: 5vh;
 	background-image: url(img/button1.png);
 	padding:0px 0px 0px 0px;
 	float: left;
@@ -168,7 +171,7 @@ a:active {
 	cursor:pointer;
 }
 
-.boton1:any-link {
+.button2:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
 	font-size: 20px;
 	font-style: normal;
@@ -179,47 +182,34 @@ a:active {
 	width: 160px;
     height: 30px;
     margin-right: 5px;
-	background-color: #FFFFFF;
+    margin-top: 5px;
+    background-image: url(img/button2.png);
 	padding:0px 0px 0px 0px;
 	float: left;
 }
-.boton1:hover {
+.button2:hover {
 	color:black;	
-	background-image: url(img/button1.jpg);
+	background-image: url(img/button2h.png);
 	cursor:pointer;
 }
 
-.botonMapa:any-link {
-    font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 14px;
-	font-style: normal;
-	font-weight: normal;
-	color: #FFFFFF;	
-	text-align: center;
-	width: 76px;
-    height: 90px;
-	background-image: url(img/map.png);
-	padding:0px 0px 0px 0px;
-	float: left;
-}
-.botonMapa: hover {
-    color:#FFFFFF;
-    text-shadow: 1px 1px #000000;
-    background-image: : url(img/map1.png);
-    cursor: pointer;
-}
-
 /*DISEÑO ADAPTATIVO*/
-@media only screen and (max-width: 616px) {
+@media only screen and (max-width: 825px) {
     .menunav {
-        min-width:515px;
-        max-width:515px;
+        min-width:660px;
+        max-width:660px;
         }
 }
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 660px) {
     .menunav {
-        min-width:414px;
-        max-width:414px;
+        min-width:495px;
+        max-width:495px;
+        }
+}
+@media only screen and (max-width: 470px) {
+    .menuIndex {
+        min-width:270px;
+        max-width:270px;
         }
 }
 @media only screen and (max-width: 800px) {
@@ -239,7 +229,7 @@ a:active {
     .map3 {
         float:left;
     }
-}//
+}
 .mapaPhaser{	
 		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
 	     margin: -10px;
@@ -249,4 +239,4 @@ a:active {
 	.mapaPhaser{	
 	     margin: auto;
 	     width: 720px;
-		 } 
+ } 
