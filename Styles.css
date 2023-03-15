@@ -51,12 +51,14 @@ h2{
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 .footer {
-    /*left: 0;
-    bottom: 0;
-    width: 100%;*/
+    /*left: 0;*/
+    /*bottom: 0;
+    width: 150%;*/
+    margin-left: -10px;
+    margin-bottom: -10px;
     margin-top: auto;
     background-color: #565A5C;
     /*position:absolute;*/
@@ -160,10 +162,12 @@ a:active {
 	width: 160px;
     height: 92px;
     margin-left: 50px;
-    margin-top: 5vh;
+    margin-top: auto;
 	background-image: url(img/button1.png);
 	padding:0px 0px 0px 0px;
 	float: left;
+    display: flex;
+    align-items: center;
 }
 .buttonIndex:hover {
 	color:white;	
@@ -204,6 +208,12 @@ a:active {
     .menunav {
         min-width:495px;
         max-width:495px;
+        }
+}
+@media only screen and (max-width: 495px) {
+    .menunav {
+        min-width:340px;
+        max-width:340px;
         }
 }
 @media only screen and (max-width: 470px) {
