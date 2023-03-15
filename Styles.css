@@ -3,8 +3,7 @@
 .fondo{
     background-color: whitesmoke;
     background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
-    width: 100%;
-    height: auto;
+    background-attachment: fixed;
     background-size: cover;
 }
 /*ESTOS SON ESTILOS PARA LA POSICIÓN DE LAS IMAGENES*/
@@ -51,12 +50,13 @@ h2{
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 97.35vh;
 }
 .footer {
     /*left: 0;*/
     /*bottom: 0;
     width: 150%;*/
+    margin-right: -8px;
     margin-left: -10px;
     margin-bottom: -10px;
     margin-top: auto;
