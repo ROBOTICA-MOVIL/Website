@@ -8,8 +8,10 @@
 }
 /*ESTOS SON ESTILOS PARA LA POSICIÓN DE LAS IMAGENES*/
 .map { 
-    margin:20px;
-	float:left;
+    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logoF{
     margin-left: 4vw;
@@ -44,6 +46,17 @@ h2{
 	margin:auto;
     margin-top: 20px;
 	margin-bottom:20px;
+} 
+h3{
+	font-family: url(fonts/AncizarSans-Extrablack_02042016.otf);
+	color:#000000;
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+	max-width: 640px;
+	margin:auto;
+    margin-top: 10px;
+	margin-bottom:10px;
 } 
 
 /*Footer*/
@@ -88,22 +101,20 @@ footer {
 	font-style: normal;
 	text-align: justify;
 	min-width:200px;
-    max-width:400px;
+    max-width:800px;
 	margin:auto;
-    opacity: 0.8;
+    opacity: 0.9;
     vertical-align: middle;
 }
 .texto3 {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 22px;
+	font-size: 18px;
 	font-style: normal;
-	text-align: justify;
+	text-align: center;
 	min-width:screen;
     max-width:screen;
-    height: 200px;
 	margin:auto;
-    background-color: #FFFFFF;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .textoR {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
@@ -177,12 +188,11 @@ a:active {
 
 .button2:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 20px;
+	font-size: 18px;
 	font-style: normal;
+    font-weight: bold;
     color: black;
-	font-weight: normal;
 	text-align: center;
-    vertical-align: center;
 	width: 160px;
     height: 30px;
     margin-right: 5px;
@@ -192,7 +202,7 @@ a:active {
 	float: left;
 }
 .button2:hover {
-	color:black;	
+	color:white;	
 	background-image: url(img/button2h.png);
 	cursor:pointer;
 }
@@ -249,4 +259,4 @@ a:active {
 	.mapaPhaser{	
 	     margin: auto;
 	     width: 720px;
- } 
+ } }
