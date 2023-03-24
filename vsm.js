@@ -180,7 +180,7 @@ var jugar = {
         }
     },
     derecha: function () {//////////
-        if (fondojuego.position.x > -1283) {// le pone límite al desplazamiento del fondo
+        if (fondojuego.position.x > -1580) {// le pone límite al desplazamiento del fondo
             fondojuego.position.x -= 6;
             boton2.alpha = 1;
         }

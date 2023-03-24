@@ -185,7 +185,7 @@ a:active {
 
 .button2:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 17px;
+	font-size: medium;
 	font-style: normal;
     font-weight: bold;
     color: black;
