@@ -60,20 +60,20 @@ var jugar = {
 		fondojuego.position.x = 0;                                         //SE DEFINE LA POSICIÓN DEL FONDO EN X.
         fondojuego.position.y = 0;                                         //SE DEFINE LA POSICIÓN DEL FONDO EN Y.  
 		
-		boton1 = juego.add.button(602, 446, "boton", this.izquierda, this);   //SE GENERA EL BOTON, SU POSICIÓN, ID Y SE LE ASIGNA UNA FUNCIÓN.  
+		boton1 = juego.add.button(25, 446, "boton", this.izquierda, this);   //SE GENERA EL BOTON, SU POSICIÓN, ID Y SE LE ASIGNA UNA FUNCIÓN.  
 		boton1.anchor.setTo(0.5);                                             //SE CENTRAN LAS COORDENADAS DEL BOTÓN.
 		boton1.scale.setTo(-1, 1);                                            //SE ROTA LA IMAGEN DEL BOTÓN CON RESPECTO A X.
 		boton1.alpha = 0.4;                                                   //SE DEFINE UNA VISIBILIDAD INICIAL DE LA IMAGEN.
         
-		boton2 = juego.add.button(695, 446, "boton", this.derecha, this);
+		boton2 = juego.add.button(118, 446, "boton", this.derecha, this);
 		boton2.anchor.setTo(0.5);
 		boton2.alpha = 0.4;
         
-        boton3 = juego.add.button(648, 402, "botonR", this.arriba, this);
+        boton3 = juego.add.button(72, 402, "botonR", this.arriba, this);
 		boton3.anchor.setTo(0.5);
 		boton3.alpha = 0.4;
         
-        boton4 = juego.add.button(648, 446, "botonR", this.abajo, this);
+        boton4 = juego.add.button(72, 446, "botonR", this.abajo, this);
 		boton4.anchor.setTo(0.5);
 		boton4.scale.setTo(1, -1);                                            //SE ROTA LA IMAGEN DEL BOTÓN CON RESPECTO A Y.
 		boton4.alpha = 0.4;
