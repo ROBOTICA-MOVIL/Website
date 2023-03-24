@@ -279,9 +279,3 @@ a:active {
 	     width: 380px;
     } 
 }
-@media only screen and (max-width: 380px) {
-	.mapaPhaser{	
-	     margin: auto;
-	     width: 320px;
-    } 
-}
