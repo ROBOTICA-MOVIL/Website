@@ -3,7 +3,7 @@
 var Zoom = {
 
     preload: function () {
-        juego.load.image("fondo", "img/otta2.png"); //LA IMAGEN CARGADA ES DISTINTA A LA DEL ESTADO PRINCIPAL.
+        juego.load.image("fondo", "img/vsm_full.png"); //LA IMAGEN CARGADA ES DISTINTA A LA DEL ESTADO PRINCIPAL.
         juego.load.image("boton", "img/play.png");
         juego.load.image("botonR", "img/play2.png");
         juego.load.image("boton+", "img/plus.png");

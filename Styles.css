@@ -22,7 +22,6 @@
     float: left;
     vertical-align: middle;
 }
-
 /*ESTILOS DE LOS TITULOS*/
 h1{
 	font-family: url(fonts/AncizarSans-Extrabold_02042016.otf);
@@ -59,7 +58,6 @@ h3{
     margin-top: 10px;
 	margin-bottom:10px;
 } 
-
 /*Footer*/
 .wrapper {
     display: flex;
@@ -161,9 +159,7 @@ a:active {
 	margin:auto;
 }
 
-
 /*ESTILOS DE LOS BOTONES*/
-
 .buttonIndex:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
 	font-size: 20px;
@@ -223,6 +219,7 @@ a:active {
 }
 @media only screen and (max-width: 495px) {
     .menunav {
+        font-size: 15px;
         min-width:340px;
         max-width:340px;
         }
@@ -232,25 +229,27 @@ a:active {
         min-width:270px;
         max-width:270px;
         }
-}
+}/*
 @media only screen and (max-width: 800px) {
     .fondo{
         background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
         width: 100%;
         height: auto;
     }
-}
+}*/
 @media only screen and (max-width: 1200px){
     .map {
-        float:left;
-        margin: 20px;
+        float: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
-}
+}/*
 @media only screen and (max-width: 450px){
     .map3 {
         float:left;
     }
-}
+}*/
 .mapaPhaser{	
 		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
 	     margin: -10px;

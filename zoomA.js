@@ -3,7 +3,7 @@
 var Zatras = {
 
     preload: function () {
-        juego.load.image("fondo", "img/otta4.png");
+        juego.load.image("fondo", "img/vsm_full.png");
         juego.load.image("boton", "img/play.png");
         juego.load.image("botonR", "img/play2.png");
         juego.load.image("boton+", "img/plus.png");
@@ -14,7 +14,8 @@ var Zatras = {
     create: function () {
         fondojuego = juego.add.sprite(720, 480, "fondo");
         fondojuego.position.x = 0;
-        fondojuego.position.y = -52;
+        fondojuego.position.y = 120;
+        fondojuego.scale =0.5;
         //juego.physics.startSystem(Phaser.Physics.ARCADE);
 
         //BOTÓNES MOVIMIENTO.
