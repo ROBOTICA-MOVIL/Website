@@ -185,7 +185,7 @@ a:active {
 
 .button2:any-link {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
-	font-size: 18px;
+	font-size: 17px;
 	font-style: normal;
     font-weight: bold;
     color: black;
@@ -194,6 +194,7 @@ a:active {
     height: 30px;
     margin-right: 5px;
     margin-top: 5px;
+    margin-bottom: 5px;
     background-image: url(img/button2.png);
 	padding:0px 0px 0px 0px;
 	float: left;
@@ -209,26 +210,25 @@ a:active {
     .menunav {
         min-width:660px;
         max-width:660px;
-        }
+    }
 }
 @media only screen and (max-width: 660px) {
     .menunav {
         min-width:495px;
         max-width:495px;
-        }
+    }
 }
 @media only screen and (max-width: 495px) {
     .menunav {
-        font-size: 11px;
         min-width:340px;
         max-width:340px;
-        }
+    }
 }
 @media only screen and (max-width: 470px) {
     .menuIndex {
         min-width:270px;
         max-width:270px;
-        }
+    }
 }/*
 @media only screen and (max-width: 800px) {
     .fondo{
@@ -277,7 +277,12 @@ a:active {
 @media only screen and (max-width: 480px) {
 	.mapaPhaser{	
 	     margin: auto;
-	     width: 360px;
-         height: 360px;
+	     width: 380px;
+    } 
+}
+@media only screen and (max-width: 380px) {
+	.mapaPhaser{	
+	     margin: auto;
+	     width: 300px;
     } 
 }
