@@ -1,8 +1,12 @@
 @charset "UTF-8";
 /* Encabezados*/
+
+
 nav ul {
     list-style: none;
+    position: fixed;
     margin: 0;
+    width: 100%;
     padding: 10px 20px;
     background-color: whitesmoke;
     display: flex;
@@ -125,6 +129,7 @@ h1{
 } 
 h2{
 	font-family: url(fonts/AncizarSans-Extrablack_02042016.otf);
+    background-color: whitesmoke;
 	color:#000000;
 	font-size: 40px;
 	text-decoration: none;
