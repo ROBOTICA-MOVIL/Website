@@ -1,7 +1,99 @@
 @charset "UTF-8";
+/* Estilos de Encabezados*/
+
+
+nav ul {
+    list-style: none;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav button {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  nav .menu-btn {
+    position: relative;
+  }
+
+  nav button:hover {
+    background-color: rgb(203, 203, 203);
+    border-radius: 5%;
+    color: rgb(0, 0, 0);
+  }
+
+  nav .menu-btn:hover {
+    background-color: rgb(203, 203, 203);
+    border-radius: 5%;
+    color: rgb(0, 0, 0);
+  }
+  
+  nav .menu-btn .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    padding: 20px;
+    display: none;
+  }
+  
+  nav .menu-btn:hover .dropdown-menu {
+    display: block;
+    width: 200px;
+  }
+  
+  nav .menu-btn .dropdown-menu li {
+    margin-bottom: 10px;
+  }
+  
+  nav .menu-btn .dropdown-menu li:last-child {
+    margin-bottom: 0;
+  }
+  
+  nav .menu-btn .dropdown-menu a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Esdeklogo {
+    height: 30px;
+  }
+
+  nav .menu-btn .dropdown-menu li:hover {
+    background-color: rgb(203, 203, 203);
+    border-radius: 5%;
+  }
+  
+  nav .menu-btn .dropdown-menu li:hover a {
+    color: rgb(0, 0, 0);
+  }
+
 /*PARA LOS FONDOS*/
 .fondo{
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -26,7 +118,7 @@
 h1{
 	font-family: url(fonts/AncizarSans-Extrabold_02042016.otf);
 	color:#000000;
-	font-size: 72px;
+	font-size: 52px;
 	font-weight: bold;
 	text-decoration: none;
 	text-shadow: 1px 1px #000000;
