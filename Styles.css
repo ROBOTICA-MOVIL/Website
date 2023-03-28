@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Encabezados*/
+/* Estilos de Encabezados*/
 
 
 nav ul {
@@ -118,7 +118,7 @@ nav ul {
 h1{
 	font-family: url(fonts/AncizarSans-Extrabold_02042016.otf);
 	color:#000000;
-	font-size: 72px;
+	font-size: 52px;
 	font-weight: bold;
 	text-decoration: none;
 	text-shadow: 1px 1px #000000;
@@ -129,7 +129,6 @@ h1{
 } 
 h2{
 	font-family: url(fonts/AncizarSans-Extrablack_02042016.otf);
-    background-color: whitesmoke;
 	color:#000000;
 	font-size: 40px;
 	text-decoration: none;
