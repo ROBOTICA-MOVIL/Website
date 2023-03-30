@@ -1,14 +1,13 @@
 @charset "UTF-8";
 /* Estilos de Encabezados*/
 
-
 nav ul {
     list-style: none;
     position: fixed;
     margin: 0;
     width: 100%;
     padding: 10px 20px;
-    background-color: whitesmoke;
+    background-color: #B1B2B0;
     display: flex;
     align-items: center;
   }
@@ -17,14 +16,10 @@ nav ul {
     margin-right: 20px;
   }
   
-  nav li:last-child {
-    margin-right: 0;
-  }
-  
   nav button {
     background-color: transparent;
     border: none;
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 16px;
     cursor: pointer;
   }
@@ -49,7 +44,7 @@ nav ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: whitesmoke;
+    background-color: #B1B2B0;
     padding: 20px;
     display: none;
   }
@@ -80,6 +75,13 @@ nav ul {
 
   .Esdeklogo {
     height: 30px;
+  }
+
+  .menu_icon{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: none;
   }
 
   nav .menu-btn .dropdown-menu li:hover {
@@ -135,7 +137,7 @@ h2{
 	text-align: center;
 	max-width: 640px;
 	margin:auto;
-    margin-top: 20px;
+    margin-top: 100px;
 	margin-bottom:20px;
 } 
 h3{
@@ -296,7 +298,7 @@ a:active {
 	cursor:pointer;
 }
 
-/*DISEÑO ADAPTATIVO*/
+/*DISEÑO ADAPTATIVO MENUS*/
 @media only screen and (max-width: 825px) {
     .menunav {
         min-width:660px;
@@ -328,6 +330,7 @@ a:active {
         height: auto;
     }
 }*/
+/*IMAGES*/
 @media only screen and (max-width: 1200px){
     .map {
         float: center;
@@ -345,14 +348,13 @@ a:active {
 		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
 	     margin: -10px;
 		 } 
-
+/*VSM*/
 @media only screen and (min-width: 720px) {
     .mapaPhaser{	
         margin: auto;
         width: 720px;
     } 
 }
-
 @media only screen and (max-width: 720px) {
 	.mapaPhaser{	
 	     margin: auto;
@@ -370,4 +372,8 @@ a:active {
 	     margin: auto;
 	     width: 380px;
     } 
+}
+/*ENCABEZADO*/
+@media only screen and (max-width: 200px) {
+
 }

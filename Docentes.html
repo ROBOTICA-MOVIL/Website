@@ -3,54 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <title>Esdek Office Furniture()</title>
-        <script src="phaser.js"></script>
-        <script src="main.js"></script>
-        <script src="vsm.js"></script>
-        <script src="zoomA.js"></script>
-        <script src="zoom.js"></script>
         <link href="Styles.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
-            <nav>
-                <ul>
-                  <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
-                  <li><a href="Process_Content_Index.html"><button>Productos</button></a></li>
-                  <li><a href="Nuestro_Equipo.html"><button>Nuestro equipo</button></a></li>
-                  <li class="menu-btn">
-                    <button>Menu</button>
-                    <ul class="dropdown-menu">
-                      <li><a href="GestionDeProyecto.html">Gestión de proyecto</a></li>
-                      <li><a href="Production_Management.html">Gestión de Producción y automatización</a></li>
-                      <li><a href="AutomatizacioneIndustria40.html">Automatización e Industria 4.0</a></li>
-                      <li><a href="CeldaDeManufacturaRobotizada.html">Celda de Manufactura Robotizada</a></li>
-                      <li><a href="DigitalFactory.html">Digital Factory</a></li>
-                      <li><a href="ControladoresIndustriales.html">Controladores Industriales (PLC)</a></li>
-                      <li><a href="ActuadoresEnAutomatizacion.html">Actuadores en Automatización</a></li>
-                      <li><a href="SCADA.html">Sistema de supervisión SCADA</a></li>
-                      <li><a href="EvaluacionEconomica.html">Evaluación Económica del proyecto</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="Docentes.html"><button>Docentes</button></a></li>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <nav>
+            <ul id="menuList">
+                <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
+                <li><a href="Process_Content_Index.html"><button>Productos</button></a></li>
+                <li><a href="Nuestro_Equipo.html"><button>Nuestro equipo</button></a></li>
+                <li class="menu-btn">
+                <button>Menu</button>
+                <ul class="dropdown-menu">
+                    <li><a href="GestionDeProyecto.html">Gestión de proyecto</a></li>
+                    <li><a href="Production_Management.html">Gestión de Producción y automatización</a></li>
+                    <li><a href="AutomatizacioneIndustria40.html">Automatización e Industria 4.0</a></li>
+                    <li><a href="CeldaDeManufacturaRobotizada.html">Celda de Manufactura Robotizada</a></li>
+                    <li><a href="DigitalFactory.html">Digital Factory</a></li>
+                    <li><a href="ControladoresIndustriales.html">Controladores Industriales (PLC)</a></li>
+                    <li><a href="ActuadoresEnAutomatizacion.html">Actuadores en Automatización</a></li>
+                    <li><a href="SCADA.html">Sistema de supervisión SCADA</a></li>
+                    <li><a href="EvaluacionEconomica.html">Evaluación Económica del proyecto</a></li>
                 </ul>
-              </nav>
+                </li>
+                <li><a href="Docentes.html"><button>Docentes</button></a></li>
+            </ul>
+        </nav>
     </head>
     <div class="wrapper">
         <body class= "fondo">
-            <div>
-                <!--"Título Principal"-->
-                <h1><a href="index.html" target="_self">ESDEK</a></h1>
-                <!--"Definimos el menú de navegación utiliazndo los estilos respectivos para cada botón y el menú en general-->
-                <nav class="menunav"> 
-                    <a class="button2" title="Process_Content_Index" href="Process_Content_Index.html" target="_self">La Respuesta</a>
-                    <a class="button2" title="Production_Management" href="Production_Management.html" target="_self">Gestión Producción</a>
-                    <a class="button2" title="4_0_Industry" href="P3.html" target="_self">Industria 4.0</a>
-                    <a class="button2" title="Project_Planning" href="P4.html" target="_self">Planeación</a>
-                    <a class="button2" title="Economic_Analysis" href="P5.html" target="_self">Análisis Económico</a>
-                </nav>
-            </div>
-
             <!--"Titulo de la sección"-->
-            <h2>GESTIÓN DE PRODUCCIÓN</h2>
-            <h3> VSM </h3>
+            <h2>DOCENTES</h2>
             <div> 
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
@@ -58,12 +39,6 @@
                     Del inglés "Value Stream Mapping", es una herramienta que nos permite analizar el flujo
                     de los procesos al interior de una emrpresa con el propósito de identificar potenciales
                     mejoras en la producción.
-                </p>
-            </div>
-            <div id="vsm" class= "mapaPhaser" ></div>
-            <div>
-                <p class="texto3">
-                    <br/>VSM de los procesos identificados.
                 </p>
             </div>
         </body>
