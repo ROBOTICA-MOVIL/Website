@@ -1,7 +1,6 @@
 @charset "UTF-8";
-/* Estilos de Encabezados*/
-
-nav ul {
+/* Estilos de Encabezados (DESKTOP)*/
+nav.desk ul {
     list-style: none;
     position: fixed;
     margin: 0;
@@ -11,34 +10,57 @@ nav ul {
     display: flex;
     align-items: center;
   }
-  
-nav li {
+nav.desk li {
     margin-right: 20px;
-  }
-  
-nav button {
+}
+nav.desk button {
     background-color: transparent;
     border: none;
     color: black;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-nav .menu-btn {
-    position: relative;
-  }
-  
-nav button:hover {
+}  
+nav.desk button:hover {
     background-color: rgb(203, 203, 203);
     border-radius: 5%;
     color: rgb(0, 0, 0);
-  }
-
+}
+nav .menu-btn {
+    position: relative;
+}  
 nav .menu-btn:hover {
     background-color: rgb(203, 203, 203);
     border-radius: 5%;
     color: rgb(0, 0, 0);
 }
+
+/*MOBILE*/
+.mob ul {
+    list-style: none;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #B1B2B0;
+    display: flex;
+    align-items: center;
+}
+.mob li {
+    margin-right: 20px;
+}
+.mob button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}  
+.mob button:hover {
+    background-color: rgb(203, 203, 203);
+    border-radius: 5%;
+    color: rgb(0, 0, 0);
+}
+
 /*desplegables*/
   nav .menu-btn .dropdown-menu {
     position: absolute;
@@ -48,20 +70,16 @@ nav .menu-btn:hover {
     padding: 10px;
     display: none;
   }
-  
   nav .menu-btn:hover .dropdown-menu {
     display: block;
     width: 220px;
   }
-  
   nav .menu-btn .dropdown-menu li {
     margin-bottom: 10px;
   }
-  
   nav .menu-btn .dropdown-menu li:last-child {
     margin-bottom: 0;
   }
-  
   nav .menu-btn .dropdown-menu a {
     display: block;
     color: rgb(0, 0, 0);
@@ -71,18 +89,17 @@ nav .menu-btn:hover {
 /*buttons*/
 nav .pc-btn {
     position: relative;
+    font-size: large;
 }
-
 nav .pc-btn:hover {
     background-color: rgb(203, 203, 203);
     border-radius: 5%;
     color: rgb(0, 0, 0);
 }
-
 nav .lpc-btn {
     position: relative;
+    font-size: large    ;
 }
-
 nav .lpc-btn:hover {
     background-color: rgb(203, 203, 203);
     border-radius: 5%;
@@ -93,26 +110,19 @@ nav .lpc-btn:hover {
 nav .pc-btn .dropdown-menu-pc {
     position: absolute;
     top: 100%;
-    left: 220px;
+    left: 230px;
     background-color: #B1B2B0;
     padding: 20px;
     display: none;
-}
-  
+} 
 nav .pc-btn:hover .dropdown-menu-pc {
     display: block;
     width: 200px;
-}
-  
+} 
 nav .pc-btn .dropdown-menu-pc li {
     margin-bottom: 10px;
     background-color: #B1B2B0;
-}
-  
-nav .pc-btn .dropdown-menu-pc li:last-child {
-    margin-bottom: 0;
-}
-  
+} 
 nav .pc-btn .dropdown-menu-pc a {
     display: block;
     color: rgb(0, 0, 0);
@@ -122,25 +132,18 @@ nav .pc-btn .dropdown-menu-pc a {
 nav .lpc-btn .dropdown-menu-lpc {
     position: absolute;
     top: 100%;
-    left: 220px;
+    left: 230px;
     background-color: #B1B2B0;
     padding: 20px;
     display: none;
-}
-  
+} 
 nav .lpc-btn:hover .dropdown-menu-lpc {
     display: block;
     width: 200px;
-}
-  
+} 
 nav .lpc-btn .dropdown-menu-lpc li {
     margin-bottom: 10px;
 }
-  
-nav .lpc-btn .dropdown-menu-lpc li:last-child {
-    margin-bottom: 0;
-}
-  
 nav .lpc-btn .dropdown-menu-lpc a {
     display: block;
     color: rgb(0, 0, 0);
@@ -148,30 +151,21 @@ nav .lpc-btn .dropdown-menu-lpc a {
 }
 
 /**/
-  body {
+body {
     margin: 0;
     padding: 0;
-  }
+}
 
-  .Esdeklogo {
+.Esdeklogo {
     height: 30px;
-  }
+}
 
-  .menu_icon{
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    display: none;
-  }
-
-  nav .menu-btn .dropdown-menu li:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-  }
-  
-  nav .menu-btn .dropdown-menu li:hover a {
-    color: rgb(0, 0, 0);
-  }
+.MenuIcon{
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
 
 /*PARA LOS FONDOS*/
 .fondo{
@@ -418,12 +412,7 @@ a:active {
         margin-left: auto;
         margin-right: auto;
     }
-}/*
-@media only screen and (max-width: 450px){
-    .map3 {
-        float:left;
-    }
-}*/
+}
 .mapaPhaser{	
 		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
 	     margin: -10px;
@@ -454,6 +443,19 @@ a:active {
     } 
 }
 /*ENCABEZADO*/
-@media only screen and (max-width: 200px) {
-
+@media only screen and (min-width: 750px) {
+    nav.desk{
+        display: block;
+    }
+    nav.mob{
+        display: none;
+    }
+}
+@media only screen and (max-width: 750px) {
+    nav.desk{
+        display: block;
+    }
+    nav.mob{
+        display: none;
+    }
 }
