@@ -62,34 +62,36 @@ nav .menu-btn:hover {
 }
 
 /*desplegables*/
-  nav .menu-btn .dropdown-menu {
+nav .menu-btn .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #B1B2B0;
-    padding: 10px;
+    padding: 20px 0px 20px 10px;
     display: none;
-  }
-  nav .menu-btn:hover .dropdown-menu {
+}
+nav .menu-btn:hover .dropdown-menu {
     display: block;
     width: 220px;
-  }
-  nav .menu-btn .dropdown-menu li {
+}
+nav .menu-btn .dropdown-menu li {
     margin-bottom: 10px;
-  }
-  nav .menu-btn .dropdown-menu li:last-child {
+}
+nav .menu-btn .dropdown-menu li:last-child {
     margin-bottom: 0;
-  }
-  nav .menu-btn .dropdown-menu a {
+}
+nav .menu-btn .dropdown-menu a {
     display: block;
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
+}
+
 /*desplegables 2*/
 /*buttons*/
 nav .pc-btn {
     position: relative;
     font-size: medium;
+    width: 100%;
 }
 nav .pc-btn:hover {
     background-color: rgb(203, 203, 203);
@@ -99,6 +101,7 @@ nav .pc-btn:hover {
 nav .lpc-btn {
     position: relative;
     font-size: medium;
+    width: 100%;
 }
 nav .lpc-btn:hover {
     background-color: rgb(203, 203, 203);
@@ -110,7 +113,8 @@ nav .lpc-btn:hover {
 nav .pc-btn .dropdown-menu-pc {
     position: absolute;
     top: 100%;
-    left: 230px;
+    left: 220px;
+    top:-10px;
     background-color: #B1B2B0;
     padding: 20px;
     display: none;
@@ -119,6 +123,11 @@ nav .pc-btn:hover .dropdown-menu-pc {
     display: block;
     width: 200px;
 } 
+
+nav .pc-btn .dropdown-menu-pc li:hover{
+    background-color: rgb(203, 203, 203);
+}
+
 nav .pc-btn .dropdown-menu-pc li {
     margin-bottom: 10px;
     background-color: #B1B2B0;
@@ -132,7 +141,8 @@ nav .pc-btn .dropdown-menu-pc a {
 nav .lpc-btn .dropdown-menu-lpc {
     position: absolute;
     top: 100%;
-    left: 230px;
+    left: 220px;
+    top:-10px;
     background-color: #B1B2B0;
     padding: 20px;
     display: none;
@@ -141,6 +151,9 @@ nav .lpc-btn:hover .dropdown-menu-lpc {
     display: block;
     width: 200px;
 } 
+nav .lpc-btn .dropdown-menu-pc li:hover{
+    background-color: rgb(203, 203, 203);
+}
 nav .lpc-btn .dropdown-menu-lpc li {
     margin-bottom: 10px;
 }
