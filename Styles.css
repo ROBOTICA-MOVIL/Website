@@ -89,7 +89,7 @@ nav .menu-btn:hover {
 /*buttons*/
 nav .pc-btn {
     position: relative;
-    font-size: large;
+    font-size: medium;
 }
 nav .pc-btn:hover {
     background-color: rgb(203, 203, 203);
@@ -98,7 +98,7 @@ nav .pc-btn:hover {
 }
 nav .lpc-btn {
     position: relative;
-    font-size: large    ;
+    font-size: medium;
 }
 nav .lpc-btn:hover {
     background-color: rgb(203, 203, 203);
