@@ -452,35 +452,7 @@ a:active {
         margin-right: auto;
     }
 }
-.mapaPhaser{	
-		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
-	     margin: -10px;
-		 } 
-/*VSM*/
-@media only screen and (min-width: 720px) {
-    .mapaPhaser{	
-        margin: auto;
-        width: 720px;
-    } 
-}
-@media only screen and (max-width: 720px) {
-	.mapaPhaser{	
-	     margin: auto;
-	     width: 620px;
-    } 
-}
-@media only screen and (max-width: 620px) {
-	.mapaPhaser{	
-	     margin: auto;
-	     width: 480px;
-    } 
-}
-@media only screen and (max-width: 480px) {
-	.mapaPhaser{	
-	     margin: auto;
-	     width: 380px;
-    } 
-}
+
 /*ENCABEZADO*/
 @media only screen and (min-width: 750px) {
     nav.desk{
