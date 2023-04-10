@@ -93,28 +93,35 @@
     color: black;
     line-height: 30px;
   }
-  
-  .social-icons {
+
+.social-icons {
     width: 70px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .team-image-wrapper {
+}
+
+.team-image-wrapper {
     width: 130px;
     height: 130px;
-  }
-  
-  .team-member-image {
+}
+   
+.github-icon {
+    width: 32px;
+    height: 32px;
+}
+.team-member-image {
     max-width: 100%;
-  }
-  
-  @media (max-width: 500px) {
+}
+
+.team-member-image2 {
+    width: 90%;
+}
+@media (max-width: 500px) {
     .card-container {
-      width: 100%;
-      margin-top: 0px;
-      margin-right: 0px;
-      margin-bottom: 25px;
-      margin-left: 0px;
+        width: 100%;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 25px;
+        margin-left: 0px;
     }
-  }
+}
