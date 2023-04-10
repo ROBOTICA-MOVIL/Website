@@ -113,10 +113,52 @@
                     diseño de la celda robotizada; osea corte láser y taladrado.</br>
                     Se hizo el anáisis de los tiempos de proceso pre y pos automatización y se calcularon unos 
                     indicadores (kpi), en los cuales podemos observar valores significativamente bajos. Esto 
-                    nos indica la gran necesidad del automatizar el proceso.
+                    nos indica la gran necesidad del automatizar el proceso.</br>
+                    <br>
+                    Para el corte manual se realiza con una sierra sin fin. En este proceso, un trabajador suele cortar a una velocidad
+                    aproximada de 0.03 m/s. El tiempo entre cortes puede ser de hasta 30 segundos. Para producir un productos se requieren
+                    realizar aproximadamente 14 cortes, y la longitud de corte calculada por producto es de 6.6m. Teniendo en cuenta el
+                    tiempo que se tarda pegando la plantilla de corte sobre el material (calculado en 180 segundos), y el tiempo que se
+                    tarda retirando las piezas tras el corte (calculado en 120 segundos) se obtienen los tiempos:
+                    <br>
+                    <br> Tiempo de corte: 6.6/0.03 = 220 segundos
+                    <br> Th: 14 * 30 = 420 segundos
+                    <br> Tiempo de ciclo: 640 segundos
+                    <br> Tiempo de setup: 180 segundos
+                    <br> Tiempo de recuperación: 120 segundos
+                    <br> No. Operarios: 1
+                    <br> No. Maquinas: 1
+                    <br>
+                    <br> Adicionalmente, sabiendo que la vida útil de la sierra es de 12 horas de corte, se encuentra:
+                    <br> MTBF: 43200 segundos
+                    <br> MTTR: 600 segundos
+                    <br> Disponibilidad: 98.6%
+                    <br>
+                    <br>
+                    El taladrado ocupa 6 segundos por cada agujero. A esto se le suma por cada agujero 20 segundos de medición y marcación,
+                    y 10 segundos de manipulación de la herramienta (taladro). También se considera que se cambia dos veces la broca, en lo
+                    cual el operario tarda 45 segundos cada vez. La cantidad aproximada de agujeros por producto es de 58. Se supone un
+                    tiempo de setup de 120 segundos en el que se conecta el taladro y se ajusta la broca, así como un tiempo de recuperación
+                    de 20 segundos, en el que se desconecta la herramienta.
+                    <br>
+                    <br> Tiempo de taladrado: 6*58 = 348 segundos
+                    <br> Th: 20 * 58 = 1160 segundos
+                    <br> Tth: 10*58 + 2*45 = 670 segundos
+                    <br> Tiempo de ciclo: 2178 segundos
+                    <br> Tiempo de setup: 120 segundos
+                    <br> Tiempo de recuperación: 20 segundos
+                    <br> No. Operarios: 1
+                    <br> No. Maquinas: 1
+                    <br> El mantenimiento del taladro se realiza cada 100 horas de uso, y tarda aproximadamente una hora (limpieza y
+                    lubricación):
+                    <br> MTBF: 360000 segundos
+                    <br> MTTR: 3600 segundos
+                    <br> Disponibilidad: 99.0%
+                    <br>
+                    <br>
                 </p>
                 <div>
-                    <iframe class="pdf" src="analisis de procesos.pdf" frameborder="0" ></iframe>
+                    <iframe class="pdf" src="docs/Analisis de procesos.pdf" frameborder="0" ></iframe>
                     <p class="texto3">
                         <br/>Análisis de procesos.
                     </p>
@@ -149,11 +191,16 @@
                     más adecuada para la celda.</br>
                 </p>
                 <div>
-                    <iframe class="pdf" src="docs/Seleccion.pdf" frameborder="0" ></iframe>
+                    <iframe class="pdf" src="docs/Analisis de seleccion.pdf" frameborder="0" ></iframe>
                     <p class="texto3">
                         <br/>Análisis de selección de alternativas.
                     </p>
                 </div>
+                <p class="texto2">
+                    Se determinó que la mejor altermativa es la B, cumpliendo favorablemente los criterios
+                    recien presentados y además, debido a que requerimos una alta producción con una cantidad 
+                    moderada de piezas, la mejor opción es una celda tipo linea de producción.</br>
+                </p>
             </div>
             
             <h3> Diseño de Detalle. </h3>
@@ -161,7 +208,7 @@
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                    Diseño de detalle de la celda.</br>
+                    El diseño de detalle de la celda se realizará proximamente.</br>
                 </p>
                 <!--<div>
                     <iframe class="pdf" src="docs/Diseño de detalle.pdf" frameborder="0" ></iframe>
@@ -178,6 +225,21 @@
                 <p class="texto2">
                     Para seleccionar el robot, se tuvieron en cuenta en mayor medida los parámetros y 
                     requerimientos físicos de la operación de taladrado.</br>
+                    Se seleccionó un robot ABB IRB 140, ya que este nos brinda la fuerza que requerimos para 
+                    realizar la operación de taladrado en el MDF, la cual no es superior a 6N. En cuanto al 
+                    alcance, se diseñará la zona de trabajo del robot de tal manera que este pudiera alcanzar 
+                    todas las piezas que se operarán en ese momento sin la necesidad de hacer algún cambio. 
+                    La instalación de este robot no es costosa ya que el piso o la superficie donde se colocará 
+                    el robot debe aguantar máximo 4 KN de compresión, 2 KN de cortante y 700 Nm de par.</br></br>
+                </p>
+                <img src="img/tablareq1.jpeg" width="50%" alt="Tabla requerimientos 1" title="Tabla requerimientos 1" class="map">
+                <p class="texto3">
+                    <br>Tabla de requerimientos para montaje en suelo. Hoja de datos IRB 140.
+                </p>
+                </p>
+                <img src="img/tablareq2.jpeg" width="50%" alt="Tabla requerimientos 2" title="Tabla requerimientos 2" class="map">
+                <p class="texto3">
+                    <br>Tabla de requerimientos para montaje en suelo. Hoja de datos IRB 140.
                 </p>
             </div>
 
