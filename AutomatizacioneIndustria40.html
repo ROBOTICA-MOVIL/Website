@@ -3,11 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Esdek Office Furniture()</title>
-        <script src="phaser.js"></script>
-        <script src="main.js"></script>
-        <script src="vsm.js"></script>
-        <script src="zoomA.js"></script>
-        <script src="zoom.js"></script>
+         
         <link href="Styles.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
     </head>
@@ -31,7 +27,7 @@
                                         <li><a href="CeldaDeManufacturaRobotizada.html">Celda de Manufactura Robotizada</a></li>
                                         <li><a href="DigitalFactory.html">Digital Factory</a></li>
                                         <li><a href="ControladoresIndustriales.html">Controladores Industriales (PLC)</a></li>
-                                        <li><a href="ActuadoresEnAutomatizacion.html">Actuadores en Automatización</a></li>
+                                         
                                         <li><a href="SCADA.html">Sistema de supervisión SCADA</a></li>
                                         <li><a href="EvaluacionEconomica.html">Evaluación Económica del proyecto</a></li>
                                     </ul>
@@ -39,7 +35,7 @@
                                 <li class="lpc-btn">
                                 <button>Proceso de Aprendizaje</button>
                                     <ul class="dropdown-menu-lpc">
-                                        <li><a href="GestionDeProyecto.html">Gestión de proyecto2</a></li>
+                                        <li><a href="Learning_Process_Content_index.html">Proceso</a></li>
                                     </ul>
                                 </li>
                             </ul>                     
@@ -51,21 +47,19 @@
             </div>
 
             <!--"Titulo de la sección"-->
-            <h2>GESTIÓN DE PRODUCCIÓN</h2>
-            <h3> VSM </h3>
+            <h2>AUTOMATIZACIÓN E INDUSTRIA 4.0</h2>
+            <h3> Arquitectura de control </h3>
             <div> 
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                    Del inglés "Value Stream Mapping", es una herramienta que nos permite analizar el flujo
-                    de los procesos al interior de una emrpresa con el propósito de identificar potenciales
-                    mejoras en la producción.
+                    A continuación se muestra la arquitectura que maneja el proyecto. Se incluyen los elementos de nivel de proceso (Siemens NX y ABB RobotStudio), nivel de control (controlador del laboratorio de la UNAL, Studio5000 y RSLinx para realizar la conexión entre estos elementos), nivel de supervisión (interfaz diseñada con Ignition designer) y una nube donde se ejecuta el servidor de Ignition para mantener la información en un punto centralizado.
                 </p>
             </div>
-            <div id="vsm" class= "mapaPhaser" ></div>
+            <img src="img/Arquitectura.png" width="50%"  alt="Arquitectura" title="Arquitectura" class="map">
             <div>
                 <p class="texto3">
-                    <br/>VSM de los procesos identificados.
+                    <br/>Arquitectura que maneja el proyecto.
                 </p>
             </div>
         </body>
