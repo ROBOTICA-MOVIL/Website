@@ -164,6 +164,16 @@ nav .lpc-btn .dropdown-menu-lpc a {
 }
 
 /**/
+.image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .imgdoble {
+    width: 50%;
+  }
+
+
 body {
     margin: 0;
     padding: 0;
@@ -282,6 +292,7 @@ footer {
 	text-align: justify;
 	min-width:200px;
     max-width:800px;
+    margin-bottom: 200px;
 	margin:auto;
     opacity: 1;
     vertical-align: middle;
