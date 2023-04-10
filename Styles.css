@@ -34,7 +34,7 @@ nav .menu-btn:hover {
     color: rgb(0, 0, 0);
 }
 
-/*MOBILE*/
+/*MOBILE(pendiente)*/
 .mob ul {
     list-style: none;
     position: fixed;
@@ -180,6 +180,15 @@ body {
     margin: 10px;
 }
 
+/*PDF*/
+.pdf{
+    align-content: center;
+    margin: auto;
+    width:70%; 
+    height:500px;
+    display: block;
+}
+
 /*PARA LOS FONDOS*/
 .fondo{
     background-color: rgb(255, 255, 255);
@@ -294,7 +303,6 @@ footer {
 	min-width:screen;
     max-width:screen;
 	margin:auto;
-    opacity: 0.8;
 }
 .textoR {
 	font-family: url(fonts/AncizarSans-Black_02042016.otf);
