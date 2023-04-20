@@ -1,168 +1,4 @@
 @charset "UTF-8";
-/* Estilos de Encabezados (DESKTOP)*/
-nav.desk ul {
-    list-style: none;
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #B1B2B0;
-    display: flex;
-    align-items: center;
-  }
-nav.desk li {
-    margin-right: 20px;
-}
-nav.desk button {
-    background-color: transparent;
-    border: none;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-}  
-nav.desk button:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-    color: rgb(0, 0, 0);
-}
-nav .menu-btn {
-    position: relative;
-}  
-nav .menu-btn:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-    color: rgb(0, 0, 0);
-}
-
-/*MOBILE(pendiente)*/
-.mob ul {
-    list-style: none;
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #B1B2B0;
-    display: flex;
-    align-items: center;
-}
-.mob li {
-    margin-right: 20px;
-}
-.mob button {
-    background-color: transparent;
-    border: none;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-}  
-.mob button:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-    color: rgb(0, 0, 0);
-}
-
-/*desplegables*/
-nav .menu-btn .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #B1B2B0;
-    padding: 20px 0px 20px 10px;
-    display: none;
-}
-nav .menu-btn:hover .dropdown-menu {
-    display: block;
-    width: 220px;
-}
-nav .menu-btn .dropdown-menu li {
-    margin-bottom: 10px;
-}
-nav .menu-btn .dropdown-menu li:last-child {
-    margin-bottom: 0;
-}
-nav .menu-btn .dropdown-menu a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-/*desplegables 2*/
-/*buttons*/
-nav .pc-btn {
-    position: relative;
-    font-size: medium;
-    width: 100%;
-}
-nav .pc-btn:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-    color: rgb(0, 0, 0);
-}
-nav .lpc-btn {
-    position: relative;
-    font-size: medium;
-    width: 100%;
-}
-nav .lpc-btn:hover {
-    background-color: rgb(203, 203, 203);
-    border-radius: 5%;
-    color: rgb(0, 0, 0);
-}
-/*submenus*/
-/*pc*/
-nav .pc-btn .dropdown-menu-pc {
-    position: absolute;
-    top: 100%;
-    left: 220px;
-    top:-10px;
-    background-color: #B1B2B0;
-    padding: 20px;
-    display: none;
-} 
-nav .pc-btn:hover .dropdown-menu-pc {
-    display: block;
-    width: 200px;
-} 
-
-nav .pc-btn .dropdown-menu-pc li:hover{
-    background-color: rgb(203, 203, 203);
-}
-
-nav .pc-btn .dropdown-menu-pc li {
-    margin-bottom: 10px;
-    background-color: #B1B2B0;
-} 
-nav .pc-btn .dropdown-menu-pc a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-/*lpc*/
-nav .lpc-btn .dropdown-menu-lpc {
-    position: absolute;
-    top: 100%;
-    left: 220px;
-    top:-10px;
-    background-color: #B1B2B0;
-    padding: 20px;
-    display: none;
-} 
-nav .lpc-btn:hover .dropdown-menu-lpc {
-    display: block;
-    width: 200px;
-} 
-nav .lpc-btn .dropdown-menu-pc li:hover{
-    background-color: rgb(203, 203, 203);
-}
-nav .lpc-btn .dropdown-menu-lpc li {
-    margin-bottom: 10px;
-}
-nav .lpc-btn .dropdown-menu-lpc a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
 /**/
 .image-container {
     display: flex;
@@ -174,12 +10,11 @@ nav .lpc-btn .dropdown-menu-lpc a {
 	margin:auto;
     opacity: 1;
     vertical-align: middle;
-  }
+}
   
-  .imgdoble {
+.imgdoble {
     width: 50%;
-  }
-
+}
 
 body {
     margin: 0;
@@ -191,10 +26,11 @@ body {
 }
 
 .MenuIcon{
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin: 10px;
+    width: 36px;
+    height: 36px;
+    position:fixed;
+    right: 20px;
+    top: 10px;
 }
 
 /*PDF*/
@@ -208,8 +44,8 @@ body {
 
 /*PARA LOS FONDOS*/
 .fondo{
-    background-color: rgb(255, 255, 255);
-    background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
+    background-color:whitesmoke;
+    background-image: url(img/white-gray-color-wood-texture-surface.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -450,23 +286,5 @@ a:active {
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-/*ENCABEZADO*/
-@media only screen and (min-width: 750px) {
-    nav.desk{
-        display: block;
-    }
-    nav.mob{
-        display: none;
-    }
-}
-@media only screen and (max-width: 750px) {
-    nav.desk{
-        display: block;
-    }
-    nav.mob{
-        display: none;
     }
 }
