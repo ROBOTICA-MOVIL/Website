@@ -61,7 +61,7 @@ body {
     float: right;
 }
 .footerIcons{
-    margin-right: 5px;
+    margin-left: 5px;
     float: left;
     vertical-align: middle;
 }
@@ -271,14 +271,7 @@ a:active {
         min-width:270px;
         max-width:270px;
     }
-}/*
-@media only screen and (max-width: 800px) {
-    .fondo{
-        background-image: url(img/Light-Wood-Background-Texture-1536x1024.jpg);
-        width: 100%;
-        height: auto;
-    }
-}*/
+}
 /*IMAGES*/
 @media only screen and (max-width: 1200px){
     .map {
