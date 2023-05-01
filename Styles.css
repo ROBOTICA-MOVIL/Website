@@ -6,10 +6,8 @@
     text-align: justify;
 	min-width:200px;
     max-width:800px;
-    margin-bottom: 200px;
 	margin:auto;
-    opacity: 1;
-    vertical-align: middle;
+    margin-bottom: 20px;
 }
   
 .imgdoble {
@@ -144,8 +142,8 @@ footer {
 	text-align: justify;
 	min-width:200px;
     max-width:800px;
-    margin-bottom: 200px;
-	margin:auto;
+    margin:auto;
+    margin-bottom: 20px;
     opacity: 1;
     vertical-align: middle;
 }
@@ -247,25 +245,15 @@ a:active {
 	cursor:pointer;
 }
 
-/*DISEÑO ADAPTATIVO MENUS*/
-@media only screen and (max-width: 825px) {
-    .menunav {
-        min-width:660px;
-        max-width:660px;
+/*DISEÑO ADAPTATIVO*/
+@media only screen and (max-width: 840px) {
+    .texto2 {
+        min-width: 160px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
-@media only screen and (max-width: 660px) {
-    .menunav {
-        min-width:495px;
-        max-width:495px;
-    }
-}
-@media only screen and (max-width: 495px) {
-    .menunav {
-        min-width:340px;
-        max-width:340px;
-    }
-}
+
 @media only screen and (max-width: 470px) {
     .menuIndex {
         min-width:270px;
