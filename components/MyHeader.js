@@ -67,6 +67,8 @@ class Header extends HTMLElement {
                         <li><a href="Learning_Process_Content_index.html">Proceso</a></li>
                         
                     </ul>
+                <li><a href="Nuestro_Equipo.html">Nuestro Equipo</a></li>
+                <li><a href="Docentes.html">Docentes</a></li>
             </ul>
         </div>
         `;
