@@ -47,6 +47,13 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.fondo2{
+    background-color:whitesmoke;
+    background-image: url(img/coworking.jpg);
+    background-position: right 0px top 30%;
+    background-attachment: fixed;
+    background-size: cover;
+}
 /*ESTOS SON ESTILOS PARA LA POSICIÓN DE LAS IMAGENES*/
 .map { 
     float: center;
@@ -67,7 +74,7 @@ body {
 h1{
 	font-family: url(fonts/AncizarSans-Extrabold_02042016.otf);
 	color:#000000;
-	font-size: 52px;
+	font-size: 60px;
 	font-weight: bold;
 	text-decoration: none;
 	text-shadow: 1px 1px #000000;
@@ -108,10 +115,10 @@ h3{
 footer {
     /*left: 0;*/
     /*bottom: 0;
-    width: 150%;*/
+    width: 150%;
     margin-right: -8px;
     margin-left: -10px;
-    margin-bottom: -10px;
+    margin-bottom: -10px;*/
     margin-top: auto;
     background-color: #565A5C;
     /*position:absolute;*/
@@ -187,17 +194,11 @@ a:active {
 }
 
 /*ESTILOS DEL MENU*/
-.menunav {
-	left:10px;
-    width: 825px;
-    align:center;
-	margin:auto;
-}
-
 .menuIndex {
-    width: 470px;
-    align:center;
+    width: 160px;
+    align-items:center;
 	margin:auto;
+    margin-top: 40vh;
 }
 
 /*ESTILOS DE LOS BOTONES*/
@@ -206,21 +207,20 @@ a:active {
 	font-size: 20px;
 	font-style: normal;
     color: black;
-	font-weight: normal;
-	text-align: center;
+	font-weight: bold;
 	width: 160px;
-    height: 92px;
-    margin-left: 50px;
-    margin-top: auto;
-	background-image: url(img/button1.png);
-	padding:0px 0px 0px 0px;
-	float: left;
-    display: flex;
+    height: 60px;
+    margin: auto;
+    background-color: #B1B2B0;
+    text-align: center;
     align-items: center;
+    display:flex;
+    justify-content: center;
+    border-radius: 25px;
 }
 .buttonIndex:hover {
 	color:white;	
-	background-image: url(img/button1h.png);
+    background-color: #565A5C;
 	cursor:pointer;
 }
 
@@ -252,12 +252,13 @@ a:active {
         margin-left: 20px;
         margin-right: 20px;
     }
+    .fondo2{
+        background-position: top 30% right 35%;
+    }
 }
-
-@media only screen and (max-width: 470px) {
-    .menuIndex {
-        min-width:270px;
-        max-width:270px;
+@media only screen and (min-width: 915px) {
+    .fondo2{
+        background-position: top 50% right 0%;
     }
 }
 /*IMAGES*/

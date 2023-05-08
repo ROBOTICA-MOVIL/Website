@@ -16,6 +16,7 @@ nav.desk button {
     background-color: transparent;
     border: none;
     color: black;
+    text-decoration: underline;
     font-size: 16px;
     cursor: pointer;
 }  
