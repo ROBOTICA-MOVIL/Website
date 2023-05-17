@@ -60,6 +60,14 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 60%;
+}
+.map2 { 
+    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
 }
 .logoF{
     margin-left: 4vw;
@@ -259,14 +267,25 @@ a:active {
 @media only screen and (min-width: 915px) {
     .fondo2{
         background-position: top 50% right 0%;
+        background-attachment: fixed;
     }
 }
 /*IMAGES*/
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 840px){
+    .map2 {
+        float: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 760px){
     .map {
         float: center;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        width: 90%;
     }
 }

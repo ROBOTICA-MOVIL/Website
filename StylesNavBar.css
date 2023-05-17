@@ -46,7 +46,7 @@ nav.mob ul {
     align-items: center;
 }
 nav.mob li {
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 /*desplegables*/
@@ -154,10 +154,11 @@ nav .lpc-btn .dropdown-menu-lpc a {
 /*mobile dropdown*/
 /*pc*/
 .dropdown-menu-mob-pc {
-    min-width: 95%;
+    /*min-width:100%;*/
     position: absolute;
-    left: 0px;
     top:30px;
+    right: 0px;
+    left: 0px;
     background-color: #B1B2B0;
     padding: 20px;
 } 
