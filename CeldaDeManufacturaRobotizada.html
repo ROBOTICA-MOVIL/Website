@@ -84,24 +84,40 @@
                     indicadores (kpi), en los cuales podemos observar valores significativamente bajos. Esto 
                     nos indica la gran necesidad del automatizar el proceso.</br>
                     <br>
-                    Para el corte manual se realiza con una sierra sin fin. En este proceso, un trabajador suele cortar a una velocidad
-                    aproximada de 0.03 m/s. El tiempo entre cortes puede ser de hasta 30 segundos. Para producir un productos se requieren
-                    realizar aproximadamente 14 cortes, y la longitud de corte calculada por producto es de 6.6m. Teniendo en cuenta el
-                    tiempo que se tarda pegando la plantilla de corte sobre el material (calculado en 180 segundos), y el tiempo que se
-                    tarda retirando las piezas tras el corte (calculado en 120 segundos) se obtienen los tiempos:
+                    El proceso de empacado requiere que el trabajador empaque todos los materiales necesarios para que el usuario arme el
+                    mueble. Esto incluye las piezas de madera (50 segundos por producto), los tubos metálicos cortados (30 segundos para la
+                    bandeja, 20 segundos para el soporte, 10 segundos para la mesa), los tarugos y tornillos que se empacan junto al pegante
+                    en una bolsa (30 segundos por producto). También se suman por producto 90 segundos que tarda el operario sellando cada
+                    caja. El setup time se establece en 60 segundos y corresponde al tiempo en que el operario prepara la caja y las partes,
+                    y el recovery time es de tan solo 15 segundos, pues es el tiempo en el que el operario desplaza las cajas para dar
+                    espacio a la siguiente operación de empacado.
                     <br>
-                    <br> Tiempo de corte: 6.6/0.03 = 220 segundos
-                    <br> Th: 14 * 30 = 420 segundos
-                    <br> Tiempo de ciclo: 640 segundos
-                    <br> Tiempo de setup: 180 segundos
-                    <br> Tiempo de recuperación: 120 segundos
+                    <br> Bandeja:
+                    <br> Tiempo de empacado: 50 + 30 + 30 + 90 = 200 segundos
+                    <br> Tiempo de ciclo: 200 segundos
+                    <br> Tiempo de setup: 60 segundos
+                    <br> Tiempo de recuperación: 15 segundos
                     <br> No. Operarios: 1
-                    <br> No. Maquinas: 1
+                    <br> No. Maquinas: 0
                     <br>
-                    <br> Adicionalmente, sabiendo que la vida útil de la sierra es de 12 horas de corte, se encuentra:
-                    <br> MTBF: 43200 segundos
-                    <br> MTTR: 600 segundos
-                    <br> Disponibilidad: 98.6%
+                    <br> Soporte:
+                    <br> Tiempo de empacado: 50 + 20 + 30 + 90 = 190 segundos
+                    <br> Tiempo de ciclo: 190 segundos
+                    <br> Tiempo de setup: 60 segundos
+                    <br> Tiempo de recuperación: 15 segundos
+                    <br> No. Operarios: 1
+                    <br> No. Maquinas: 0
+                    <br>
+                    <br> Mesa:
+                    <br> Tiempo de empacado: 50 + 10 + 30 + 90 = 180 segundos
+                    <br> Tiempo de ciclo: 180 segundos
+                    <br> Tiempo de setup: 60 segundos
+                    <br> Tiempo de recuperación: 15 segundos
+                    <br> No. Operarios: 1
+                    <br> No. Maquinas: 0
+                    <br>
+                    <br> El proceso de empacado es manual y no se requiere realizar mantenimiento a ninguna máquina. Por lo anterior, se
+                    considera una disponibilidad del 100%.
                     <br>
                     <br>
                     El taladrado ocupa 6 segundos por cada agujero. A esto se le suma por cada agujero 20 segundos de medición y marcación,
@@ -172,19 +188,37 @@
                 </p>
             </div>
             
-            <h3> Diseño de Detalle. </h3>
+            <h3> Diseño de La Celda. </h3>
             <div> 
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                    El diseño de detalle de la celda se realizará proximamente.</br>
+                    Se tuvo en cuenta un área de 6.6mx8.5m para la celda y todos sus componentes. Los celda está enjaulada 
+                    utilizando rejas de al menos 1.8m de alto y con agujeros que permitan máximo el paso de dedos. 
+                    Se cuenta con un acceso a un cuarto de control, donde se encontrará el controlador y algunas otras 
+                    herramientas o indicadores que sirvan para operar o monitorear la celda. También se cuenta con 
+                    una puerta que debe tener seguridad de apertura y cierre para poder entrar al espacio del robot y 
+                    realizar tareas como destrabe o mantenimiento. La celda tiene una entrada de material por banda 
+                    transportadora, la cual debe contar con la sensorica y restricciones fisicas pertinenetes para solo 
+                    permitir el paso de las láminas de 12mm y las bandejas de 10mm sobre las que están apoyadas. También 
+                    se tienen dos salidas de material, también por banda transportadora, las cuales tambien deben tener 
+                    la sensorica y restricciones físicas de seguridad; estas bandas dan a una zona en la que un operario 
+                    interactúa directamente con ellas mediante el recibimiento de las cajas de los productos ya empacados 
+                    y proveyendo una nueva caja vacía al sistema.</br>
+                    A continuación podemos ver algunas imágenes en las que se representa la celda y sus distintos componentes.
                 </p>
-                <!--<div>
-                    <iframe class="pdf" src="docs/Diseño de detalle.pdf" frameborder="0" ></iframe>
-                    <p class="texto3">
-                        <br/>Diseño de detalle de la celda.
-                    </p>
-                </div>-->
+                </p>
+                <img src="img/CELDA_3.png" width="50%" alt="Cell" title="Celda Robotizada" class="map">
+                <p class="texto3">
+                    <br>Imágen de la celda diseñada en RobotStudio.
+                </p>
+                </p>
+                </p>
+                <img src="img/CELDA_4.png" width="50%" alt="Cell" title="Celda Robotizada" class="map">
+                <p class="texto3">
+                    <br>Imágen de la celda diseñada en RobotStudio.
+                </p>
+                </p>
             </div>
 
             <h3> Selección del Robot </h3>
@@ -192,23 +226,43 @@
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                    Para seleccionar el robot, se tuvieron en cuenta en mayor medida los parámetros y 
-                    requerimientos físicos de la operación de taladrado.</br>
-                    Se seleccionó un robot ABB IRB 140, ya que este nos brinda la fuerza que requerimos para 
-                    realizar la operación de taladrado en el MDF, la cual no es superior a 6N. En cuanto al 
-                    alcance, se diseñará la zona de trabajo del robot de tal manera que este pudiera alcanzar 
-                    todas las piezas que se operarán en ese momento sin la necesidad de hacer algún cambio. 
-                    La instalación de este robot no es costosa ya que el piso o la superficie donde se colocará 
-                    el robot debe aguantar máximo 4 KN de compresión, 2 KN de cortante y 700 Nm de par.</br></br>
+
+                    Para la selección del robot, buscamos el robot por medio de la ayuda del 
+                    aplicativo Robot Selector de ABB. Allí se colocaron los datos de requerimientos del 
+                    robot, como por ejemplo aplicación, capacidad de carga y alcance. Nos apareció una 
+                    lista de robots que podrían cumplir con la tarea, por lo cuál nos guiámos más de el 
+                    alcance, ya que era uno de nuestros requerimientos más importantes. Luego de filtrar 
+                    de esta manera nos quedaron 2 opciones, el IRB 1600 y el IRB 1300; nos decantamos por 
+                    el 1600 ya que este cuenta con más alcance. Una vez seleccionado pasamos a revisar su 
+                    manual y corroborar que la carga que íbamos a manejar si podía ser soportada por el robot.
+                    </br>
+                    Observando las tablas se determinó en todos los casos que para la distancia a la que se 
+                    sujetarían las piezas, que es 120mm, siempre y cuando estén sujetadas cerca a su centro de 
+                    gravedad, el robot puede moverlas con su máxima capacidad, 6kg.
+                    </br></br>
                 </p>
-                <img src="img/tablareq1.jpeg" width="50%" alt="Tabla requerimientos 1" title="Tabla requerimientos 1" class="map">
+                
+            </div>
+
+            <h3> Análisis y Justificación </h3>
+            <div> 
+                <p class="texto2">
+                    Una vez ya culminados todos los pasos descritos anteriormente se toma el tiempo de producción
+                    de la celda, dando 672 segundos por lamida de MDF, la cual tiene en ella la cantidad de piezas 
+                    para realizar 12 productos, de allí podemos sacar que se demora 56 segundos por producto, eso 
+                    en contraste al tiempo de los 2178 segundos que se demoraba manualmente un operario en realizar 
+                    todos los agujeros de un producto representa una mejora del 97% en el tiempo de producción.</br> 
+                    Ahora mirando ya los costos de la celda, nos da que el costo incluido los materiales, equipos, 
+                    instalación y prueba de la celda es de 250 millones de pesos, teniendo que remover por lo menos 
+                    a 2 operarios. Con estos sacamos el KPI ROI de nuestra celda la cual nos da:</br>
+                </p>
+                <img src="img/ayj.png" width="50%" alt="ROI" title="Justificación" class="map">
                 <p class="texto3">
-                    <br>Tabla de requerimientos para montaje en suelo. Hoja de datos IRB 140.
+                    <br>Imágen obtenida usando la herrmaienta ROI calculator.
                 </p>
-                </p>
-                <img src="img/tablareq2.jpeg" width="50%" alt="Tabla requerimientos 2" title="Tabla requerimientos 2" class="map">
-                <p class="texto3">
-                    <br>Tabla de requerimientos para montaje en suelo. Hoja de datos IRB 140.
+                <p class="texto2">
+                    Lo cual nos demuestra que el uso de la celda robotizada ahorra mucho dinero y mejora mucho 
+                    la productividad. 
                 </p>
             </div>
 
