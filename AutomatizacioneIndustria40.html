@@ -29,6 +29,17 @@
                     <br/>Arquitectura que maneja el proyecto.
                 </p>
             </div>
+        </p>
+            <p class="texto2">
+                La imagen no solo describe las comunicaciones utilizadas a lo largo de toda la red del proyecto, sino tambien los niveles de la pirámide
+                de la automatización utilizados. En el nivel más bajo del esquema de arquitectura se encuentra la red de campo en donde se han establecido
+                los actuadores correspondientes a las máquinas de corte, pintado, fresado y los equipos de la celda robotizada. Cada una de estas estaciones
+                digitales se comunica con su nivel superior mediante protocolo OPC UA. En este caso se tienen 4 ordenadores separados, cada uno con ignition
+                local y sus módulos de comunicación MQTT los cuales conforman la red de control. Es mediante estos módulos y el protocolo MQTT que los tags almacenados localmente en el ignition de
+                cada ordenador se comunican con un servidor de ignition instalado en un contenedor de Microsoft Azure. Es en este contenedor y la instalación
+                de ignition en la nube que utilizando los tags en la nube e ignition Designer se diseña una HMI de alto desempeño; así culmina la red
+                de SCADA.
+            </p>
         </body>
         <footer>
             <footer-custom></footer-custom>
