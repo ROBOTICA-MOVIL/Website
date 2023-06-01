@@ -15,13 +15,53 @@
 
             <!--"Titulo de la sección"-->
             <h2>CONTROLADORES INDUSTRIALES (PLC/PAC)</h2>
-            <h3> VSM </h3>
+            <h3> Problema de control secuencial </h3>
             <div> 
-                <!--Texto-->
-                <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                    Del inglés.
+                    El problema de control que se presenta en el proyecto integrador requiere la programación 
+                    de varias subrutinas en lógica Ladder. Sin embargo, pese a que Ladder es el lenguaje en 
+                    el que se programa la solución, la estructura de la misma corresponde a la naturaleza de Grafcet, 
+                    es decir, se identificaron las etapas y transiciones del problema, y se adaptaron de esta manera las 
+                    capacidades de Ladder para obtener un código comprensible, robusto y más versátil del que podría 
+                    haberse obtenido empleando lógica convencional.
+                    <br>
+                    En primer lugar, la rutina Main es simplemente una rutina que se encarga de dar inicio a las otras, 
+                    cuando recibe una señal que indica el inicio de la operación. Las tres rutinas a las que 
+                    Main da paso son el control de señales de inicio y parada de la celda robotizada, el control de la 
+                    máquina de corte de tubos, y el control de la máquina de pintado (la máquina de lacado, por ser idéntica 
+                    a la de pintado, no se programa como una rutina diferente).
+                    <br>
+                    La rutina del robot consiste simplemente en dos etapas paralelas que dependen de la entrada del 
+                    operario (botones de inicio o parada). Según la entrada que reciba el PLC, se envía la información 
+                    al controlador del robot para dar inicio a la rutina o detener la misma.
+                    <br>
+                    La rutina de pintado tiene principalmente tres secciones en paralelo. La primera corresponde a la parada 
+                    de emergencia al presionar el botón correspondiente. La segunda es la rutina de homing, que 
+                    lleva todos los actuadores a la posición de home para que estén listos para iniciar el proceso de pintado. 
+                    Por último, la tercera es la rutina de movimiento para pintar. En esta, los actuadores longitudinales 
+                    recorren el área a pintar en su totalidad. Posteriormente, el actuador transversal mueve la boquilla una distancia 
+                    previamente determinada, y los actuadores longitudinales regresan a su posición original. Esto continúa de manera 
+                    sucesiva hasta que s ha cubierto la totalidad del área a pintar, en cuyo caso el proceso se detiene.
+                    <br>
+                    Finalmente, la rutina de corte contiene también rutinas paralelas. La primera es, igual que en casos anteriores, 
+                    la rutina de parada. La segunda es la rutina de homing. En este caso, al realizar el homing el sistema inicialmente 
+                    lleva los actuadores a su máxima extensión y luego los retorna a la posición cero. La tercera y última rutina es 
+                    la rutina de movimiento secuencial. En esta, primero se alimenta el material que se va a cortar. Luego, el carro 
+                    de la máquina avanza a la posición determinada por la longitud del corte requerido. Posteriormente, el cilindro de 
+                    sujección se extiende y el de alimentación retrocede. Tras esto, se produce el corte al extenderse el cilindro C. 
+                    Esta secuencia continúa de esta manera variando las distancias de corte según corresponda con el proceso, hasta 
+                    que se han cortado los 20 tubos necesarios para la fabricación de los tres productos.
                 </p>
+            </div>
+            <h3> Grafcet Esdek </h3>
+            <div> 
+                <iframe class="pdf" src="docs/GrafcetEsdek.pdf" frameborder="0" ></iframe>
+                
+            </div>
+            <h3> Ladder Esdek </h3>
+            <div> 
+                <iframe class="pdf" src="docs/LadderLogicEsdek.pdf" frameborder="0" ></iframe>
+                
             </div>
         </body>
         <footer>
