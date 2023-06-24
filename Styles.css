@@ -43,7 +43,7 @@ body {
 /*PARA LOS FONDOS*/
 .fondo{
     background-color:whitesmoke;
-    background-image: url(img/white-gray-color-wood-texture-surface.jpg);
+    background-image: url(img/textura-cemento.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
