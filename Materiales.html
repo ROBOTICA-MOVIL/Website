@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Esdek Office Furniture(Digital Factory)</title>
+        <link href="StylesNavBar.css" rel="stylesheet" type="text/css"> 
+        <link href="Styles.css" rel="stylesheet" type="text/css">
+        <script src="components/MyHeader.js" type="text/javascript" defer></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <div class="wrapper">
+        <body class= "fondo">
+            
+            <header-custom></header-custom>
+
+            <!--"Titulo de la sección"-->
+            <h2>Materiales</h2>
+            <h3> Gemelo digital para el pintado y lacado </h3>
+            <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2">
+                   Se requiere pintar y lacar piezas planas de MDF por las caras y los bordes en un solo color y una solo tipo de laca. Con base en el análisis de tiempo y cálculo de los KPI
+                   se justifica la necesidad de automatizar estos 2 procesos. Por ser procesos identicos en cuanto al tipo y número de piezas y por compartir la misma herramienta
+                   y rutinas de movimiento se diseña un mismo sistema de 2 ejes de movimiento encargado de realizar ambos procesos. 
+                   Como el lacado y el pintado utilizan materiales diferentes se utilizan dos sistemas identicos, uno para el pintado y uno para el lacado. Esta desción se justifica 
+                   al reducir la interacción del operario con la maquina y su ingreso a la zona de trabajo.
+                </p>
+            </div>
+           
+            <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2" style="font-weight: bold;">Lista de partes:</p>
+                <ul class="texto2">
+                   <li> 8 unidades de eje de accionamiento por correa dentada ELGS-TB-KF-60-2000-ST-M-H1-PLK-AA de la marca FESTO. Costo por unidad 10.000.000 COP
+                   <li> 26 metros de perfil tubular cuadrado de 80mmx80mm de acero. Costo por metro 70.000 COP
+                   <li> 8 pistolas de pintura para robots industrial. Costo por unidad 700.000 COP
+                   <li> 2 sistemas de accionamiento neumático de 1 MPa para las pistolas de pintura. Costo por unidad 3.000.000 COP
+                   <li> 18 sensores de final de carrera tipo Z. Costo por unidad 50.000 COP
+                </ul> 
+            </div>
+             <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2" style="font-weight: bold;">Tiempos</p>
+                <ul class="texto2">
+                   <li> Setup time: 90 s
+                   <li> Cycle time: 47 s
+                </ul> 
+                <p class="texto2">
+                  Un ciclo de operación correponde con el momento en que la máquina se encuentra pintando alguna de las 2 caras de las piezas por tanto el tiempo de ciclo
+                  es el tiempo que tarda la máquina en pintar una cara de un lote de partes.
+                  El setup de la operación tiene 2 momentos, el primero corresponde a la ubicación en el espacio de trabajo de un lote de partes que ha salido de la estación de trabajo anterior.
+                  El segundo momento corresponde a la acción de voltear las partes del lote luego del secado para pintar la cara faltante. Por ser tiempos asimétricos se suman y se dividen entre 2
+                  quedando el tiempo de setup repartido entre el pintado de la primera cara y el de la segunda cara.
+                </p>
+            </div>
+             <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2" style="font-weight: bold;">Tags de Control:</p>
+                 <p class="texto2">
+                 Se utilizan servidores OPC UA para realizar el control de la maquina de pintado a travez de un PAC que se encuentra en el nivel de control de la planta.
+                 Para esta comunicación se crearon TAGS de entrada y de salida del proceso de pintado que serán transmitididos vía OPC UA a un servidor OPC local en ignition que transmite 
+                 remotamente la información de los TAG mediante el protocolo MQTT.
+                 A continuación se muestran los TAGs de Entrada.
+                </p>
+                <ul class="texto2">
+                   <li> Avance del motor A
+                   <li> Avance del motor B
+                   <li> Avance del motor C
+                   <li> Retroceso del motor A
+                   <li> Retroceso del motor B
+                   <li> Retroceso del motor C    
+                </ul> 
+                <p class="texto2">
+                 TAGs de salida
+                </p>
+                 <ul class="texto2">
+                   <li> Incio y final de carrera motor A
+                   <li> Incio y final de carrera motor B
+                   <li> Incio y final de carrera motor C
+                   <li> Presencia de material
+                   <li> 2 posiciones intermedias de carrera de motor   
+                </ul> 
+            </div>
+             <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2" style="font-weight: bold;">Simulación en NX</p>
+                <ul class="texto2">
+                   <li> Dimensiones: 2.5 m x 2.5 m x 2.25 m
+                   <li> Cantidad de cuerpos rígidos: 4
+                   <li> Cantidad de cuerpos móviles: 2
+                </ul> 
+                <p class="texto2">
+                  En NX Mechatronics Concept Designer se implementó el movimiento de los ejes para un ciclo de operación excluyendo los procesos de setup. La intención de la simulación 
+                  es verificar las dimenciones que ocupa la máquina, definir los perfiles de movimiento requeridos y determinar el tiempo de ciclo teniendo encuenta límites de aceleración y velocidad
+                  impuestos por el frabricante de los actuadores lineales. Mas adelante el gemelo digital funcionará como herramienta para validar el correcto funcionamiento del las comunicaciones
+                  industriales, el control implementado y el funcionamiento de la estación en conjunto con las demás que participan en la manufactura de los 3 productos.
+                 </p>
+                 <p class="texto2">
+                    <a href="img/maquina_de_pintado.JPG?raw=true">
+                    <img src="img/maquina_de_pintado.JPG?raw=true" width="50%" height="50%" alt="Estación de Pintura" title="Estación de Pintura" class="map">
+                    </a>
+                 </p>
+                 <p class="texto3">
+                    <a href="P7.html" title="Gemelo digital en NX de la estación de pintado">Gemelo digital en NX de la estación de pintado [1].</a>
+                </p>
+                 <style>
+                 iframe {
+                    display: block;
+                    margin: 0 auto;
+                 }
+                 </style>
+                 <iframe class="texto2" width="90%" height="400px" src="https://youtube.com/embed/rMVpd0NRsVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <h3> Gemelo digital para corte de tubos </h3>
+            <div> 
+                <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2">
+                   Con esta máquina automatizada se pretende realizar el corte de tubos para ser usados en 2 de los 3 productos. Esta
+                   versatilidad y la secuencia de pasos para llevar a cabo el proceso lo hace un candidato perfecto para su automatización.
+                   La máquina tiene la capacidad de realizar el corte de tubos de forma automática y debe ser posible seleccionar la 
+                   longitud deseada para realizar el corte, por lo que el tubo a producir podrá ser cortado dependiendo de la demanda
+                   de cada una de estas partes.
+                </p>
+            </p>
+                <p class="texto2">
+                    Con el fin de realizar el gemelo digital de la máquina se proponen las siguientes operaciones las cuales deben ser
+                    realizadas por la misma:
+                 </p>
+                </p>
+                 <ol class="texto2">
+                    <li> Detección de presencia de material</li>
+                    <li> Sujeción del material suministrado </li>
+                    <li> Desplazamiento del material dependiendo de la longitud demandada en el momento </li>
+                    <li> Sujeción del material para corte</li>
+                    <li> Corte del material </li>
+                    <li> Almacenamiento de material</li>                    
+                 </ol>
+            </div>
+            <!--"Titulo de la sección"-->
+            <h3> Lista preliminar de materiales </h3>
+            <div> 
+                <p class="texto2">Tras determinar las operaciones a realizar se realiza la selección de los sensores y actuadores que tienen la capacidad de 
+                    realizar dichas tareas y que adicionalmente cuentat con los elementos y compatibilidad necesaria para implementar un
+                    sistema SCADA:
+                </p>
+            </p>
+                <ol class="texto2">
+                   <li> Actuador lineal electromecánico marca FESTO EPCO-25-300-3P-ST-E. </li>
+                   <li> 3 Cilindros neumáticos de doble efecto marca FESTO DNC-32-50-PPV </li>
+                   <li> 3 electro-válvulas 5-2 </li>
+                   <li> Sensor inductivo marca WEG SL2-8C1LDA</li>
+                   <li> Compresor </li>
+                   <li> Unidad de manteninmiento</li>
+                </ol>
+            </p>
+            <h3>Simulación en NX</h3>
+            <div class="image-container">
+                <img src="img/CorteSuperior.png" alt="CorteSuperior" class="imgdoble">
+                <img src="img/CorteInferior.png" alt="CorteInferior" class="imgdoble">
+            </div>
+        </p>
+            <p class="texto2">En NX Mechatronnics Concept Designer se simuló el movimiento de cada uno de los actuadores así como las
+                físicas de cada uno de los elementos que en la realidad entrarían en contato dentro de la estación de trabajo. Al asociar
+                un actuador con cada una de las operaciones mencionadas en secciones anteriores y visualizando el modelo se observa que se 
+                utilizan 2 cilindores de doble efecto para realizar la sujeción de la pieza y un tercero para realizar el corte. El movimiento
+                longitudinal se realiza mediante el actuado electromecánico y la presencia del material a cortar se detecta mediante el
+                sensor inductivo. Con esta disposición de elementos se obtienen los siguientes resultados.
+            </p>
+        </p>
+        <p class="texto2" style="font-weight: bold;">Tiempos de corte (260mm)</p>
+            <ul class="texto2">
+                <li>Setup Time: 20s</li>
+                <li>Cycle Time: 4s</li>
+            </ul>
+        </p>
+        <p class="texto2" style="font-weight: bold;">Tiempos de corte (72 y 24mm)</p>
+            <ul class="texto2">
+                <li>Setup Time: 20s</li>
+                <li>Cycle Time: 2s</li>
+            </ul>
+        </p>
+            <p class="texto2">
+                Para los datos obtenidos es necesario recalcar que el tiempo de setup es el tiempo que tarda un operario en preparar
+                la máquina cuando esta se acciona por primera vez; En ambos casos este tiempo incluye el encendido de el compresor, verificación
+                del estado de la máquina y suministro de material. Posteriormente el tiempo de ciclo corresponde al tiempo que tarda la máquina
+                desde que es encendida hasta que realiza un corte y vuelve a la posición inicial justo antes de tomar nuevamente el material.
+            </p>
+            </div>
+        </p>
+            <iframe width="560" height="315" class="map" src="https://www.youtube.com/embed/yewXb-4aRVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </p>
+            <iframe width="560" height="315" class="map" src="https://www.youtube.com/embed/Q6o6OXagOU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </body>
+        <p class="texto2">
+            Para el correcto funcionamiento d ela estación, se conectó NX mediante OPC UA con el servidor local de Ignition el cual, mediante protocolo
+            MQTT ya se encontraba conectado al servidor de Ignition en la nube y de la misma manera a las demás estaciones descritas en el proyecto.
+            Para la coordinación entre la estación digital y las instrucciones ejecutadas en el PLC son necesarios ciertos TAGS de entrada y de salida
+            de la estación que describen el accionamiento y verificación de las operaciones mencionadas anteriormente.
+        </p>
+        <footer>
+            <footer-custom></footer-custom>
+        </footer>
+    </div>
+</html>
+    
