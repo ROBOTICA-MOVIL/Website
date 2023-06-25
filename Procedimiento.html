@@ -21,7 +21,7 @@
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                  jkk
+                  A continuación se muestra de manera general el paso a paso que se siguió para desarrollar este proyecto
                 </p>
             </div>
            
@@ -33,7 +33,7 @@
                    <li> Indagar sobre la forma de establecer comunicación con el Lego EV3
                    <li> Reconocer conexiones y cables necesarios
                    <li> Crear y armar el laberinto 
-                   <li> Posicionar y focalizar la cámara Kinetic
+                   <li> Posicionar y focalizar la cámara Kinect
                    <li> Identificar el origen del laberinto que reconoce la cámara
                    <li> Realizar el procesamiento de imágenes y comunicación
                    <li> Realizar pruebas
@@ -47,20 +47,21 @@
             <h3> Captura de información de la cámara </h3>
             <div>
              <div> 
+                  <p class="texto2">
+                Uso e identificación RGB de la imágen para filtrar y capturar objetos de un color especifico , para esto se desarrolla un código en Matlab que permite identificar la cámara Kinect y guardar la información que es capturada en la imágen, como el conjunto de datos corespondientes a los colores identificados y se guardan en un vector, seguido de esto se genera una imágen en escala de grises y se extraen los objetos de color azul, recordando que como se está usando la uinformación RGB que es captada, solo se pueden identificar objetos de color, rojo verde y azul.
+                </p>
+                 
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2" style="font-weight: bold;">Tiempos</p>
                 <ul class="texto2">
-                   <li> Setup time: 90 s
-                   <li> Cycle time: 47 s
+                   <li> colorvid.timeout: 0.01 
+                   <li> colorvid.FramePerTrigger: 1
+                   <li> img=imsubstract(img0(:,:,3),rgb2gray(img0))
+                   <li> pause(0.001) = 3 s
+                       
                 </ul> 
-                <p class="texto2">
-                  Un ciclo de operación correponde con el momento en que la máquina se encuentra pintando alguna de las 2 caras de las piezas por tanto el tiempo de ciclo
-                  es el tiempo que tarda la máquina en pintar una cara de un lote de partes.
-                  El setup de la operación tiene 2 momentos, el primero corresponde a la ubicación en el espacio de trabajo de un lote de partes que ha salido de la estación de trabajo anterior.
-                  El segundo momento corresponde a la acción de voltear las partes del lote luego del secado para pintar la cara faltante. Por ser tiempos asimétricos se suman y se dividen entre 2
-                  quedando el tiempo de setup repartido entre el pintado de la primera cara y el de la segunda cara.
-                </p>
+               
             </div>
              <div> 
                 <!--Texto-->
