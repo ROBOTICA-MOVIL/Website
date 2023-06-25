@@ -16,18 +16,48 @@
 
             <!--"Titulo de la sección"-->
             <h2>Resultados</h2>
-            <h3> Gemelo digital para el pintado y lacado </h3>
+            <h3> Pruebas de captura de información con la cámara Kinect </h3>
             <div> 
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2">
-                   Se requiere pintar y lacar piezas planas de MDF por las caras y los bordes en un solo color y una solo tipo de laca. Con base en el análisis de tiempo y cálculo de los KPI
-                   se justifica la necesidad de automatizar estos 2 procesos. Por ser procesos identicos en cuanto al tipo y número de piezas y por compartir la misma herramienta
-                   y rutinas de movimiento se diseña un mismo sistema de 2 ejes de movimiento encargado de realizar ambos procesos. 
-                   Como el lacado y el pintado utilizan materiales diferentes se utilizan dos sistemas identicos, uno para el pintado y uno para el lacado. Esta desción se justifica 
-                   al reducir la interacción del operario con la maquina y su ingreso a la zona de trabajo.
+                   
                 </p>
+                <p class="texto2">
+                    <a href="img/7.JPG?raw=true">
+                    <img src="img/7.JPG?raw=true" width="50%" height="50%" alt="Comparación identificación de objetos en diferentes orientaciones" title="Comparación identificación de objetos en diferentes orientaciones" class="map">
+                    </a>
+                 </p>
+                 <!--Texto-->
+                <!--texto con estilo 'texto'-->
+                <p class="texto2">
+                   
+                </p>
+                <p class="texto2">
+                    <a href="img/8.JPG?raw=true">
+                    <img src="img/8.JPG?raw=true" width="50%" height="50%" alt="Comparación identificación de objetos en diferentes geometrías" title="Comparación identificación de objetos en diferentes geometrías" class="map">
+                    </a>
+                 </p>
+
+                <pre>
+        <code>
+            colorvid.timeout=0.01;
+            colorVid.FramesPerTrigger = 1;
+            depthVid.FramesPerTrigger = 1;
+            img=imsubtract(img0(:,:,1),rgb2gray(img0));
+            bw=bwareaopen(bw,500);
+            pause(0.001);
+        </code>
+    </pre>
             </div>
+
+
+
+
+
+
+
+            
            
             <div> 
                 <!--Texto-->
