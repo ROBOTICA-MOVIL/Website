@@ -11,7 +11,7 @@ class Header extends HTMLElement {
                     <li><a href="PresentacionProyecto.html"><button>Presentación del Proyecto</button></a></li>
                     <li><a href="Materiales.html"><button>Materiales</button></a></li>
                     <li><a href="Procedimiento.html"><button>Procedimiento</button></a></li>
-                    <li><a href="Resultados.html"><button>Resultados</button></a></li>
+                    <li><a href="Resultados.html"><button>Resultados</button></a></li> 
                 </ul>
             </nav>
         </div>
