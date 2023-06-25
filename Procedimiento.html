@@ -52,55 +52,86 @@
                 </p>
                  <pre>
         <code>
-            function resultado = sumar(a, b)
-                resultado = a + b;
-            end
+            hwInfo = imaqhwinfo('kinect');
+            hwInfo.DeviceInfo(1);
+            hwInfo.DeviceInfo(2);
+            colorVid = videoinput('kinect',1);
+            depthVid = videoinput('kinect',2);
+            colorvid.timeout=0.01;
+            triggerconfig([colorVid depthVid],'manual');
+            colorVid.FramesPerTrigger = 1;
+            depthVid.FramesPerTrigger = 1;
+            start([colorVid depthVid]);
+            % Trigger the devices to start logging of data.
+            trigger([colorVid depthVid]);
+            % Retrieve the acquired data
+            [colorFrameData,colorTimeData,colorMetaData] = getdata(colorVid);
+            [depthFrameData,depthTimeData,depthMetaData] = getdata(depthVid);
+            % Stop the devices
+            %stop([colorVid depthVid]);
+            % Pull out the 95th color frame
+            img0=colorFrameData(:, :, :, 1);            
+            img=imsubtract(img0(:,:,1),rgb2gray(img0)); 
         </code>
     </pre>
-                
-                 
-                <!--Texto-->
-                <!--texto con estilo 'texto'-->
-                <p class="texto2" style="font-weight: bold;">Comandos a resaltar</p>
-                <ul class="texto2">
-                   <li> colorvid.timeout: 0.01 
-                   <li> colorvid.FramePerTrigger: 1
-                   <li> img=imsubstract(img0(:,:,3),rgb2gray(img0))
-                   <li> pause(0.001) = 3 s
-                       
-                </ul> 
-               
-            </div>
-             <div> 
-                <!--Texto-->
-                <!--texto con estilo 'texto'-->
-                <p class="texto2" style="font-weight: bold;">Tags de Control:</p>
-                 <p class="texto2">
-                 Se utilizan servidores OPC UA para realizar el control de la maquina de pintado a travez de un PAC que se encuentra en el nivel de control de la planta.
-                 Para esta comunicación se crearon TAGS de entrada y de salida del proceso de pintado que serán transmitididos vía OPC UA a un servidor OPC local en ignition que transmite 
-                 remotamente la información de los TAG mediante el protocolo MQTT.
-                 A continuación se muestran los TAGs de Entrada.
-                </p>
-                <ul class="texto2">
-                   <li> Avance del motor A
-                   <li> Avance del motor B
-                   <li> Avance del motor C
-                   <li> Retroceso del motor A
-                   <li> Retroceso del motor B
-                   <li> Retroceso del motor C    
-                </ul> 
                 <p class="texto2">
-                 TAGs de salida
+                Dado que las características del entorno son cambiantes como por ejemplo la iluminación del lugar el color de los objetos, es necesario aplicar un filtro para eliminar espacios en la parte interior de los objetos que reconoce así como eliminar los objetos menores a 1000 pixeles esto para evitar que se generen fantasmas por captar objetos duplicados.
                 </p>
-                 <ul class="texto2">
-                   <li> Incio y final de carrera motor A
-                   <li> Incio y final de carrera motor B
-                   <li> Incio y final de carrera motor C
-                   <li> Presencia de material
-                   <li> 2 posiciones intermedias de carrera de motor   
-                </ul> 
-            </div>
-             <div> 
+                   <pre>
+        <code>
+            bw=im2bw(img,0.13);                         % para binarizar la imagen
+            bw=medfilt2(bw);                            % para aplicar un filtro 
+            bw=imopen(bw,strel('disk',1));   
+            bw=bwareaopen(bw,500);                     %para eliminar los objetos menores a 3000 pixeles
+            bw=imfill(bw, 'holes');                     % para eliminar los espacios dentro de los objetos que reconoce la camara
+        </code>
+    </pre>
+                 <p class="texto2">
+                Una vez identificados los objetos lo que nos interesa es su posición en el espacio captado por la cámara por lo que se le agregan una etiqueta a cada objeto identificado esto con el fin de contabilizar cuantos de ellos reconoce para después dibujar sobre ellos un rectangulo que los contenga e identificar el centroide, finalmente se muestra en pantalla las coordenadas que cada centroide tiene:
+                </p>
+                            <pre>
+        <code>
+                [L,N]=bwlabel(bw);                          % para agregar etiquetas a los objetos identificados, esto se guarda en la variable L, y en la variable N se guardan la cantidad de objetos idetificados
+                prop=regionprops(L);                        % para obtener las propiedades de los elementos identificados
+                imshow(img0);  % para mostrar las capturas
+                for n=1:N
+                    % las coordenadas del origen detectado por la camra corresponden a
+                    % la esquina superior izquierda
+                    c=round(prop(n).Centroid);             % para obtener el centroid
+                    rectangle('Position', prop(n).BoundingBox,'EdgeColor','g','LineWidth',2)        % para hacer un rectangulo de color verde sobre el objeto
+                    text(c(1),c(2),strcat('X:',num2str(c(1)),'Y:',num2str(c(2))),'Color','green');  % para agregar las coordenadas
+                    xp(n)=c(1);
+                    yp(n)=c(2);
+        </code>
+    </pre>
+                  <p class="texto2">
+                    <a href="img/2.JPG?raw=true">
+                    <img src="img/2.JPG?raw=true" width="50%" height="50%" alt="Origen del mapa" title="Origen del mapa" class="map">
+                    </a>
+                 </p>
+                 <p class="texto2">
+                Cabe resaltar que las coordenadas del origen detectado por la camra corresponden a la esquina superior izquierda, por lo tanto si se quiere garantizar el mismo origen se debe dejar fija la cámara o en su defecto utilizar marcadores que indiquen la orientación y posición de la misma.
+                </p>
+
+
+                  </div>
+            <h3> Mapa en MATLAB </h3>
+            <div>
+                
+
+                  </div>
+            <h3> Localización del robot </h3>
+            <div>
+
+
+
+
+
+
+
+
+                 
+           
                 <!--Texto-->
                 <!--texto con estilo 'texto'-->
                 <p class="texto2" style="font-weight: bold;">Simulación en NX</p>
