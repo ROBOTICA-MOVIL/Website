@@ -10,7 +10,7 @@ class Footer extends HTMLElement {
       <p class="footerIcons"> 
       <a href="index.html" title="Home"><img src="img/ic_action_home.png" width="62" height="62" alt="Home"/></a><br/></p>
       <p class="footerIcons"> 
-      <a href="https://github.com/Esdek" title="GitHub"><img src="img/ic_action_github.png" width="62" height="62" alt="GitHub"/></a><br/></p>
+      <a href="https://github.com/orgs/ROBOTICA-MOVIL/repositories" title="GitHub"><img src="img/ic_action_github.png" width="62" height="62" alt="GitHub"/></a><br/></p>
       `;
     }
   }
