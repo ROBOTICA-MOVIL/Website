@@ -118,13 +118,122 @@
                   </div>
             <h3> Mapa en MATLAB </h3>
                  <p class="texto2">
-                Cabe resaltar que las coordenadas del origen detectado por la cámara corresponden a la esquina superior izquierda, por lo tanto si se quiere garantizar el mismo origen se debe dejar fija la cámara o en su defecto utilizar marcadores que indiquen la orientación y posición de la misma.
+                Para crear el modelo digital del laberinto captado por la cámara se utilizó el software Autodesk Inventor en donde se cargó la imágen tomada por la cámara y se escalo a las dimensiones reales del laberinto, luego se copio la geometría y se guardo como una imagen png. Esta imágen se cargo a paint para ajustar los pixeles de la imágen, por último se desarrollo el siguiente código en Matlab para poder procesarlo como un mapa de ocupación binaria:
                 </p>
+                                     <pre>
+        <code>
+                %Cargar la imagen del laberinto y crear el mapa
+                X=imread('laberinto.png','png');
+                X=imresize(X,[240, 291]);
+                X=X(:,:,1);
+                min(min(X));
+                max(max(X));
+                Xb=X<128;
+                mapa=binaryOccupancyMap(double(Xb),100);     % Para crear el mapa
+                figure()
+                show(mapa)
+                grid on
+        </code>
+    </pre>
+
+                <p class="texto2">
+                    <a href="img/3.JPG?raw=true">
+                    <img src="img/3.JPG?raw=true" width="50%" height="50%" alt="Mapa" title="Mapa" class="map">
+                    </a>
+                 </p>
+                 <p class="texto2">
+                Para evitar que el EV3 se choque con los diferentes obstáculos del laberinto se realiza el inflado del mapa utilizando el radio del robot:
+                </p>
+                                    <pre>
+        <code>
+               % Inflado de los obstaculos
+                inflate(mapa,0.07)
+                figure()
+                show(mapa)
+                grid on
+        </code>
+    </pre>
+
+                <p class="texto2">
+                    <a href="img/4.JPG?raw=true">
+                    <img src="img/4.JPG?raw=true" width="50%" height="50%" alt="Mapa inflado" title="Mapa inflado" class="map">
+                    </a>
+                 </p>
+                  <p class="texto2">
+                Como lo que se busca es que el robot cumpla una misión se propone utilizar el algoritmo PRM para determinar la ruta que le permita realizar el recorrido dado un punto inicial y final:
+                </p>
+                                               <pre>
+        <code>
+               % Ruta 1
+                pos_in=[2.6,0.2];          % Posicion inicial     
+                pos_fin=[1.8,1.8];          % Posicion final    
+                th=-pi;                   %[º] Orientacion del robot
+                
+                % Planeacion PRM  
+                prm = robotics.PRM(mapa);
+                prm.NumNodes = 300;
+                prm.ConnectionDistance =10;
+                path = findpath(prm, pos_in, pos_fin);
+                figure()
+                show(prm);
+                grid on
+        </code>
+    </pre>
+
+                <p class="texto2">
+                    <a href="img/5.JPG?raw=true">
+                    <img src="img/5.JPG?raw=true" width="50%" height="50%" alt="Ruta a seguir por el EV3" title="Ruta a seguir por el EV3" class="map">
+                    </a>
+                 </p> 
+            
             <div>
                 
 
                   </div>
             <h3> Localización del robot </h3>
+                 <p class="texto2">
+                Para la localización del robot en el laberinto se colocan tres marcadores del color de interés sobre el EV3
+                </p>
+                <p class="texto2">
+                    <a href="img/6.JPG?raw=true">
+                    <img src="img/6.JPG?raw=true" width="50%" height="50%" alt="Indicadores para localización del EV3" title="Indicadores para localización del EV3" class="map">
+                    </a>
+                 </p>
+                <p class="texto2">
+                
+                </p>
+            <pre>
+        <code>
+            Points=[xp;yp];
+            i=1;
+            currentpoint=Points(:,i);
+            distance=currentpoint-Points;
+            d=diag(sqrt(distance'*distance));
+            [row, col,outs]=find(d);
+            error=max(outs)-min(outs);
+            if error<5
+                print('yes');
+                head=Points(:,i);
+                index=i;
+            else
+                print('not');
+                head=Points(:,find(d==max(d)));
+                index=find(d==max(d));
+            end
+            indices=[1 2 3];
+            indices=find(indices~=index);
+            vector_direction=head-(Points(:,indices(1))+Points(:,indices(2)))/2;
+            or_cam=atan2(vector_direction(2)*(250/480),vector_direction(1)*(341/640));
+            x_cam=head(1);
+            y_cam=head(2);
+            disp('--------------------------------------------------------------')
+            disp('X    Y    Orientacion')
+            disp([x_cam*(341/640) y_cam*(250/480) or_cam*180/pi])
+            data_postura=[data_postura;[x_cam*(341/640) y_cam*(250/480) or_cam*180/pi]];
+        </code>
+    </pre>
+                
+                
             <div>
 
 
@@ -136,37 +245,6 @@
 
                  
            
-                <!--Texto-->
-                <!--texto con estilo 'texto'-->
-                <p class="texto2" style="font-weight: bold;">Simulación en NX</p>
-                <ul class="texto2">
-                   <li> Dimensiones: 2.5 m x 2.5 m x 2.25 m
-                   <li> Cantidad de cuerpos rígidos: 4
-                   <li> Cantidad de cuerpos móviles: 2
-                </ul> 
-                <p class="texto2">
-                  En NX Mechatronics Concept Designer se implementó el movimiento de los ejes para un ciclo de operación excluyendo los procesos de setup. La intención de la simulación 
-                  es verificar las dimenciones que ocupa la máquina, definir los perfiles de movimiento requeridos y determinar el tiempo de ciclo teniendo encuenta límites de aceleración y velocidad
-                  impuestos por el frabricante de los actuadores lineales. Mas adelante el gemelo digital funcionará como herramienta para validar el correcto funcionamiento del las comunicaciones
-                  industriales, el control implementado y el funcionamiento de la estación en conjunto con las demás que participan en la manufactura de los 3 productos.
-                 </p>
-                 <p class="texto2">
-                    <a href="img/maquina_de_pintado.JPG?raw=true">
-                    <img src="img/maquina_de_pintado.JPG?raw=true" width="50%" height="50%" alt="Estación de Pintura" title="Estación de Pintura" class="map">
-                    </a>
-                 </p>
-                 <p class="texto3">
-                    <a href="P7.html" title="Gemelo digital en NX de la estación de pintado">Gemelo digital en NX de la estación de pintado [1].</a>
-                </p>
-                 <style>
-                 iframe {
-                    display: block;
-                    margin: 0 auto;
-                 }
-                 </style>
-                 <iframe class="texto2" width="90%" height="400px" src="https://youtube.com/embed/rMVpd0NRsVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
             <h3> Gemelo digital para corte de tubos </h3>
             <div> 
                 <!--Texto-->
