@@ -18,7 +18,7 @@ class Header extends HTMLElement {
         <div>
             <nav class="mob">
                 <ul>
-                    <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
+                    <li><a href="index.html"><img src="img/LUDIN.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
                     <li><a href="#" onclick="displayMenu()"><img src="img/menu_icon.png" alt="Menu Icon" class="MenuIcon"></a></li>
                 </ul>
             </nav>
