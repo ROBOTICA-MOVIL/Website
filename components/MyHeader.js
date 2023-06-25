@@ -26,7 +26,7 @@ class Header extends HTMLElement {
         <div>
                <ul id="list" class="dropdown-menu-mob-pc">
                 <li><a href="PresentacionProyecto.html">Presentación del Proyecto</a></li>
-                <li><a href="Materiales.html.html">Materiales</a></li>
+                <li><a href="Materiales.html">Materiales</a></li>
                 <li><a href="Procedimiento.html">Procedimiento</a></li>
                 <li><a href="Resultados.html">Resultados</a></li>
             </ul>
