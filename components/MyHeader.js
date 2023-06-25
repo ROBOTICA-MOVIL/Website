@@ -9,32 +9,6 @@ class Header extends HTMLElement {
                 <ul>
                     <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
                     <li><a href="Process_Content_Index.html"><button>Productos</button></a></li>
-                    <li class="menu-btn">
-                    <button>Menu</button>
-                        <ul class="dropdown-menu">
-                            <li class="pc-btn">
-                            <button>Contenido de Producto</button>
-                                <ul class="dropdown-menu-pc" id="list-pc">
-                                    <li><a href="GestionDeProyecto.html">Gestión de proyecto</a></li>
-                                    <li><a href="Production_Management.html">Gestión de Producción y automatización</a></li>
-                                    <li><a href="AutomatizacioneIndustria40.html">Automatización e Industria 4.0</a></li>
-                                    <li><a href="CeldaDeManufacturaRobotizada.html">Celda de Manufactura Robotizada</a></li>
-                                    <li><a href="DigitalFactory.html">Digital Factory</a></li>
-                                    <li><a href="ControladoresIndustriales.html">Controladores Industriales (PLC)</a></li>
-                                        
-                                    <li><a href="SCADA.html">Sistema de supervisión SCADA</a></li>
-                                    <li><a href="EvaluacionEconomica.html">Evaluación Económica del proyecto</a></li>
-                                </ul>
-                            </li>
-                            <li class="lpc-btn">
-                            <button>Proceso de Aprendizaje</button>
-                                <ul class="dropdown-menu-lpc">
-                                    <li><a href="Learning_Process_Content_index.html">Proceso</a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>                     
-                    </li>
                     <li><a href="Nuestro_Equipo.html"><button>Nuestro equipo</button></a></li>
                     <li><a href="Docentes.html"><button>Docentes</button></a></li>
                 </ul>
@@ -49,24 +23,6 @@ class Header extends HTMLElement {
             </nav>
         </div>
         <div>
-            <ul id="list" class="dropdown-menu-mob-pc">
-                <li><a href="Process_Content_Index.html">Productos</a></li>
-                <li><a href="#" onclick="displayMenu2()">Contenido de Producto</a></li>
-                    <ul id = "list2">
-                        <li><a href="GestionDeProyecto.html">Gestión de proyecto</a></li>
-                        <li><a href="Production_Management.html">Gestión de Producción y automatización</a></li>
-                        <li><a href="AutomatizacioneIndustria40.html">Automatización e Industria 4.0</a></li>
-                        <li><a href="CeldaDeManufacturaRobotizada.html">Celda de Manufactura Robotizada</a></li>
-                        <li><a href="DigitalFactory.html">Digital Factory</a></li>
-                        <li><a href="ControladoresIndustriales.html">Controladores Industriales (PLC)</a></li>  
-                        <li><a href="SCADA.html">Sistema de supervisión SCADA</a></li>
-                        <li><a href="EvaluacionEconomica.html">Evaluación Económica del proyecto</a></li>
-                    </ul>
-                <li><a href="#" onclick="displayMenu3()">Proceso de Aprendizaje</a></li>
-                    <ul id="list3">
-                        <li><a href="Learning_Process_Content_index.html">Proceso</a></li>
-                        
-                    </ul>
                 <li><a href="Nuestro_Equipo.html">Nuestro Equipo</a></li>
                 <li><a href="Docentes.html">Docentes</a></li>
             </ul>
