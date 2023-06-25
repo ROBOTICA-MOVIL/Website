@@ -9,8 +9,9 @@ class Header extends HTMLElement {
                 <ul>
                     <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
                     <li><a href="PresentacionProyecto.html"><button>Presentación del Proyecto</button></a></li>
-                    <li><a href="Nuestro_Equipo.html"><button>Nuestro equipo</button></a></li>
-                    <li><a href="Docentes.html"><button>Docentes</button></a></li>
+                    <li><a href="Materiales.html"><button>Materiales</button></a></li>
+                    <li><a href="Procedimiento.html"><button>Procedimiento</button></a></li>
+                    <li><a href="Resultados.html"><button>Resultados</button></a></li>
                 </ul>
             </nav>
         </div>
@@ -25,8 +26,9 @@ class Header extends HTMLElement {
         <div>
                <ul id="list" class="dropdown-menu-mob-pc">
                 <li><a href="PresentacionProyecto.html">Presentación del Proyecto</a></li>
-                <li><a href="Nuestro_Equipo.html">Nuestro Equipo</a></li>
-                <li><a href="Docentes.html">Docentes</a></li>
+                <li><a href="Materiales.html.html">Materiales</a></li>
+                <li><a href="Procedimiento.html">Procedimiento</a></li>
+                <li><a href="Resultados.html">Resultados</a></li>
             </ul>
         </div>
         `;
