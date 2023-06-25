@@ -23,6 +23,8 @@ class Header extends HTMLElement {
             </nav>
         </div>
         <div>
+               <ul id="list" class="dropdown-menu-mob-pc">
+                <li><a href="PresentacionProyecto.html">Presentación del Proyecto</a></li>
                 <li><a href="Nuestro_Equipo.html">Nuestro Equipo</a></li>
                 <li><a href="Docentes.html">Docentes</a></li>
             </ul>
