@@ -12,6 +12,7 @@ class Header extends HTMLElement {
                     <li><a href="Materiales.html"><button>Materiales</button></a></li> 
                     <li><a href="Procedimiento.html"><button>Procedimiento</button></a></li>
                     <li><a href="Resultados.html"><button>Resultados</button></a></li>
+                    <li><a href="Equipo.html"><button>Equipo</button></a></li>
                 </ul>
             </nav>
         </div>
@@ -29,6 +30,7 @@ class Header extends HTMLElement {
                 <li><a href="Materiales.html">Materiales</a></li>
                 <li><a href="Procedimiento.html">Procedimiento</a></li>
                 <li><a href="Resultados.html">Resultados</a></li>
+                <li><a href="Equipo.html">Equipo</a></li>
             </ul>
         </div> 
         `;
