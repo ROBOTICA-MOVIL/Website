@@ -8,7 +8,7 @@ class Header extends HTMLElement {
             <nav class="desk">
                 <ul>
                     <li><a href="index.html"><img src="img/EsdekLogo.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
-                    <li><a href="Process_Content_Index.html"><button>Productos</button></a></li>
+                    <li><a href="PresentacionProyecto.html"><button>Presentación del Proyecto</button></a></li>
                     <li><a href="Nuestro_Equipo.html"><button>Nuestro equipo</button></a></li>
                     <li><a href="Docentes.html"><button>Docentes</button></a></li>
                 </ul>
