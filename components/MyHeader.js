@@ -5,7 +5,7 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div>
-            <nav class="desk">
+            <nav class="desk"> 
                 <ul>
                     <li><a href="index.html"><img src="img/LUDIN.png" alt="Esdek Logo" class="Esdeklogo"></a></li>
                     <li><a href="PresentacionProyecto.html"><button>Presentación del Proyecto</button></a></li>
