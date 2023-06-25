@@ -49,7 +49,7 @@
                 <p class="texto2">
                 Uso e identificación RGB de la imágen para filtrar y capturar objetos de un color especifico , para esto se desarrolla un código en Matlab que permite identificar la cámara Kinect y guardar la información que es capturada en la imágen, como el conjunto de datos corespondientes a los colores identificados y se guardan en un vector, seguido de esto se genera una imágen en escala de grises y se extraen los objetos de color azul, recordando que como se está usando la uinformación RGB que es captada, solo se pueden identificar objetos de color, rojo, verde y azul.
                 </p>
-               
+                <pre>
                 <code>
                     hwInfo = imaqhwinfo('kinect');
                     hwInfo.DeviceInfo(1);
@@ -72,7 +72,7 @@
                     img0=colorFrameData(:, :, :, 1);            
                     img=imsubtract(img0(:,:,3),rgb2gray(img0)); 
                 </code>
-         
+                </pre>
                 <p class="texto2">
                 Dado que las características del entorno son cambiantes como por ejemplo la iluminación del lugar el color de los objetos, es necesario aplicar un filtro para eliminar espacios en la parte interior de los objetos que reconoce así como eliminar los objetos menores a 1000 pixeles esto para evitar que se generen fantasmas por captar objetos duplicados.
                 </p>
