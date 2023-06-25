@@ -44,7 +44,7 @@ const list3 = document.getElementById("list3");
 list3.style.display = "none";
 
 function displayMenu(){
-    if(list.style.display=="none"){
+    if(list.style.display=="none"){ 
         list.style.display = "block";
     }else{
         list.style.display = "none";
