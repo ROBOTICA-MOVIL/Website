@@ -30,7 +30,7 @@ class Header extends HTMLElement {
                 <li><a href="Procedimiento.html">Procedimiento</a></li>
                 <li><a href="Resultados.html">Resultados</a></li>
             </ul>
-        </div>
+        </div> 
         `;
     }
 }
