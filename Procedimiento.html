@@ -192,7 +192,7 @@
                   </div>
             <h3> Localización del robot </h3>
                  <p class="texto2">
-                Para la localización del robot en el laberinto se colocan tres marcadores del color de interés sobre el EV3
+                Para la localización del robot en el laberinto se necesita conocer la posición y la orientación del robot, para esto se colocan tres marcadores del color de interés sobre el EV3 posicionados de tal forma que se forme un triángulo isóceles y el vértice que este más alejado corresponda al frente del robot:
                 </p>
                 <p class="texto2">
                     <a href="img/6.JPG?raw=true">
@@ -200,7 +200,7 @@
                     </a>
                  </p>
                 <p class="texto2">
-                
+                Por lo que se utilizan las coordenadas de los tres centroides identificados y se halla la distancia de cada uno de estos al lado formado por los otros dos, una vez determinadas estas distancias se busca la distancia mayor ya que esta corresponde a la ubicación de la cabeza del triángulo, luego se guardan las coordenadas de este centroide para después poder gráficarlos y compara con la ruta propuesta por el algortimo PRM:
                 </p>
             <pre>
         <code>
@@ -232,8 +232,7 @@
             data_postura=[data_postura;[x_cam*(341/640) y_cam*(250/480) or_cam*180/pi]];
         </code>
     </pre>
-                
-                
+
             <div>
 
 
