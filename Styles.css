@@ -55,7 +55,7 @@ body {
     background-size: cover;
 }
 /*ESTOS SON ESTILOS PARA LA POSICIÓN DE LAS IMAGENES*/
-.map { 
+.map {
     float: center;
     display: block;
     margin-left: auto;
