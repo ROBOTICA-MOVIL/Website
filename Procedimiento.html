@@ -299,10 +299,52 @@
         </p>
         <h4 class="texto2">I2C Arduino-EV3</h4>
         <p class="texto2">
-        El EV3 tiene disponible bloques que permiten recibir y enviar bytes por comunicación I2C. Esto bloques se importan al entorno de desarrollo de LEGO descargando el archivo Dexter.ev3b y cargandolo en la pestaña importar bloques.
+        El EV3 tiene disponible bloques que permiten recibir y enviar bytes por comunicación I2C. Estos bloques se importan al entorno de desarrollo de LEGO descargando el archivo Dexter.ev3b y cargandolo en la pestaña importar bloques.
         El EV3 utiliza un cable RJ12 telefónico para sus comunicaciones, se utiliza un conector hembra RJ12 y se adapta a la geometría de los cables del LEGO EV3. A la salida de este adaptador se utilizan los cables de SDA, SCL, VCC, GND marcados con los colores
         azul, amarillo, verde y rojo respectivamente. Se debe conectar 2 resistencia de pull-up mayores a 53 k Ohm en la linea de datos SDA y de reloj SCL.
         </p>
+        <p class="texto2">
+        El envio de datos con arduino se realiza por medio de la librería wire.h y conectando la linea de datos SDA al pin análogo 4 y la linea de reloj SCL al pin análogo 5 reservados por defecto para la comunicación I2C.
+        </p>
+        <pre class="map2">
+            <code>
+                #include <Wire.h>
+                #define SLAVE_ADDRESS 0x04
+                void setup() 
+                {
+                    Serial.begin(9600);         // start serial for output
+                    Wire.begin(SLAVE_ADDRESS);
+                    Wire.onReceive(receiveData);
+                    Wire.onRequest(sendData);
+                    Serial.println("Ready!");
+                }
+            </code>
+        </pre>
+        <div>
+        <p class="texto2">
+        Se crea un arreglo de tipo uint8_t de tamaño 8 para almacenar los bytes que se van a enviar, en este caso solo se utilizan los últimos 2 bytes del arreglo para la magnitud de la potencia de los 2 motores del EV3.
+        Este arreglo se envía constantemente utilizando la función sendData que es llamada por wire.onRequest() siempre que el EV3 esté disponible para leer bytes. Dentro del loop() se llama la función creada para recibir desde matlab
+        la potencia de los motores y se asigna al arreglo c[] en las posiciones correspondientes a los motores.   
+        </p>
+        <pre class="map2">
+            <code>
+                int val,flag=0,index=0, incomingByte=0,incomingByte2=0;
+                uint8_t c[]={0,0,0,0,0,0,25,50};
+                void loop()
+                {
+                delay(500);
+                matlabSerialRecive();
+                c[6]= incomingByte;
+                c[7]= incomingByte2;
+                }
+                // callback for sending data
+                void sendData()
+                {
+                  Wire.write(c,8);
+                }
+            </code>
+        </pre> 
+            
         <footer>
             <footer-custom></footer-custom>
         </footer>
