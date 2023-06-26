@@ -247,9 +247,18 @@
                     </a>
                  </p>
              </div>
-
-
-            
+        <h3>Navegación planeada</h3>
+        <p class="texto2">
+            Para lograr la navegación planeada es necesario comunicar el LEGO EV3 con un controlador externo que tenga acceso a su postura con respecto a un amrco de referencia fijo y sobre un espacio de trabajo o mapa cercano a la realidad.
+            En secciones anteriores se logró mapear el espacio de trabajo del robot móvil y obtner su postura en determinado momento con ayuda de una cámara kinect. Sin embargo, resulta necesario establecer una comunicación con el EV3 mientras se encuentra en el laberinto
+            para poder actualizar la velocidad de las ruedas de acuerdo con su postura actual, la misión que se desea cumplir y el algoritmo de control que se decide implementar.
+            Teniendo encuenta que la localización del robot móvil se realiza en Matlab, se propone crear un canal de comunicación entre este y el EV3. Para esto se utiliza al arduino como enlace ya que Matlab puede enviar y recibir mensajes mediante el protocolo UART y 
+            el arduino puede enviar y recibir datos al EV3 mediante la comunicación I2C.
+        </p>
+        <h4>UART Matlab-Arduino</h4>
+        <p class="texto2"> 
+        Primero se debe conecta el arduino al computador donde se está ejecutando Matlab. Luego se utiliza el comando serialportlist para identificar el puerto disponible para la comuniación serial con arduino 
+        </p> 
         <footer>
             <footer-custom></footer-custom>
         </footer>
