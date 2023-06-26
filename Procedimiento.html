@@ -257,7 +257,14 @@
         </p>
         <h4 class="texto2">UART Matlab-Arduino</h4>
         <p class="texto2"> 
-        Primero se debe conecta el arduino al computador donde se está ejecutando Matlab. Luego se utiliza el comando serialportlist para identificar el puerto disponible para la comuniación serial con arduino 
+        Primero se debe conectar el arduino al computador donde se está ejecutando Matlab. Luego se utiliza el comando serialportlist para identificar el puerto disponible para la comuniación serial con arduino 
+        </p>
+        <p class="texto2">.
+        En este caso el puerto identificado es el puerto COM3 y se utiliza como argumento de la función serialport("COM3",9600) para establecer la comunicación entre el arduino y Matlab.
+        </p> 
+        <p class="texto2">.
+        En Matlab se localiza el robot móvil y se determina la velocidad de las ruedas necesaria para cumplir una misión. Esta velocidad se convierte al equivalente en potencia del motor que varía de -100 a 100, escala que es posible enviar en 2 byte
+        uno para la mágnitud y otro para el signo de la potencia del motor. 
         </p> 
         <footer>
             <footer-custom></footer-custom>
