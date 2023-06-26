@@ -259,13 +259,42 @@
         <p class="texto2"> 
         Primero se debe conectar el arduino al computador donde se está ejecutando Matlab. Luego se utiliza el comando serialportlist para identificar el puerto disponible para la comuniación serial con arduino 
         </p>
-        <p class="texto2">.
+        <p class="texto2">
         En este caso el puerto identificado es el puerto COM3 y se utiliza como argumento de la función serialport("COM3",9600) para establecer la comunicación entre el arduino y Matlab.
         </p> 
-        <p class="texto2">.
+        <p class="texto2">
         En Matlab se localiza el robot móvil y se determina la velocidad de las ruedas necesaria para cumplir una misión. Esta velocidad se convierte al equivalente en potencia del motor que varía de -100 a 100, escala que es posible enviar en 2 byte
-        uno para la mágnitud y otro para el signo de la potencia del motor. 
+        uno para la mágnitud y otro para el signo de la potencia del motor. La función write(device,[motor1, motor2, dir1, dir2],"uint8") permite enviar 4 bytes con la información de la potencia de los motores, esta recibe como argumento el objeto device que se creó anteriormente,
+        un vector con los bytes a enviar y el tipo de dato, en este caso entero sin signo de 8 bits. 
         </p> 
+        <p class="texto2">
+        Para recibir el mensaje enviado desde Matlab se utiliza el siguiente código. Primero iniciamos la comunicación serial con Serial.Begin(9600) en el setup().
+        </p> 
+        <pre class="map2">
+            <code>
+                void setup(){
+                    Serial.begin(9600);
+                }
+            </code>
+        </pre>
+        <p class="texto2">
+            Creamos una función para recibir el mensaje serial.
+        </p>
+         <pre class="map2">
+            <code>
+              void matlabSerialRecive()
+              {
+                 if (Serial.available() > 0) {
+                    // lee el byte de entrada:
+                    incomingByte = Serial.read();
+                    incomingByte2 = Serial.read();
+                  }
+               }
+            </code>
+        </pre>
+        <p class="texto2">
+            Esta función se llama dentro del void loop() y sirve para guardar los bytes enviados deste matlab en las variables incomingByte e incomingByte2.
+        </p>
         <footer>
             <footer-custom></footer-custom>
         </footer>
