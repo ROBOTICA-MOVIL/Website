@@ -369,6 +369,23 @@
                     </a>
         </p>
         <h4 class="texto2">Ganacia de los motores</h4>
+        <p class="texto2">
+        Para establecer la velocidad de los motores se debe hallar la constante de proporcionalidad entre la potencia del motor que va de -100 a 100 y la velocidad angular de las ruedas. Para esto se utiliza el siguiente codigo en bloques que permite variar potencia del motor y almacenar la respuesta de posición angular de las ruedas del EV3.
+        Por ser una respuesta lineal es suficiente con determinar la pendiente de la recta en estado estable y esta dividirla ente la potencia del motor. Se tomaron medidas variando la potencia de 10 en 10 desde 10 hasta 100 y por cada valor de potencia se mandan 3 steps de potencia y se almacena la respuesta.
+        </p>
+        <p class="texto2">
+                    <a href="img/ExperimentoMotores.PNG?raw=true">
+                    <img src="img/ExperimentoMotores.PNG?raw=true" width="30%" height="30%" alt="Indicadores para localización del EV3" title="Indicadores para localización del EV3" class="map">
+                    </a>
+        </p>
+        <p class="texto2">
+        El entorno Experiemnto LEGO permite promediar las respuestas obtenidas y posteriormente realizar una regresión lineal sobre una ventana de tiempo adecuada que considere unicamente el valor de estado estable. 
+        </p>
+         <p class="texto2">
+                    <a href="img/MotorCara.PNG?raw=true">
+                    <img src="img/MotorCara.PNG?raw=true" width="30%" height="30%" alt="Indicadores para localización del EV3" title="Indicadores para localización del EV3" class="map">
+                    </a>
+        </p>
         <footer>
             <footer-custom></footer-custom>
         </footer>
