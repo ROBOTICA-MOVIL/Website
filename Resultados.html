@@ -53,19 +53,17 @@
                    A continuación se encuentran las líneas de código que fueron modificadas para realizar una detección de objetos de color rojo óptima con un intervalo entre capturas de 3 segundos:
                 </p>
          <p class="texto2">
-        <pre class="map2">
-        <code>
-            colorvid.timeout=0.01;
-            colorVid.FramesPerTrigger = 1;
-            depthVid.FramesPerTrigger = 1;
-            img=imsubtract(img0(:,:,1),rgb2gray(img0));
-            bw=bwareaopen(bw,500);
-            pause(0.001);
-        </code>
-    </pre>
-  </p>
-  
-
+            <pre class="map2">
+            <code>
+                colorvid.timeout=0.01;
+                colorVid.FramesPerTrigger = 1;
+                depthVid.FramesPerTrigger = 1;
+                img=imsubtract(img0(:,:,1),rgb2gray(img0));
+                bw=bwareaopen(bw,500);
+                pause(0.001);
+            </code>
+            </pre>
+          </p>
             <h3> Navegación por comportamientos </h3>
               
             <div> 
@@ -74,10 +72,10 @@
                 <p class="texto2">
                    Para realizar el recorrido por navegación por comportamientos se utiliza el código de seguidor de linea realizado en LEGO MINDSTROM expuesto en la sección anterior. A continuación se encuentra la ruta que debía seguir el robot y la ruta de la trayectoria realizada:
                 </p>
-                  <div class="image-container">
+                <div class="image-container">
                 <img src="img/13.JPG" alt="13" class="imgdoble">
                 <img src="img/14.JPG" alt="14" class="imgdoble">
-            </div>
+                </div>
                 <p class="texto2">
                    Como se observa las geometrías son similares sin embargo, de acuerdo a la ruta capturada por la kinect parecierá que este empieza y temrina en el mismo punto es decir, lo toma como una trayectoria cerrada cuando de hecho no lo es, por lo que es necesario hacer alguna calibración para futuros trabajos. 
                 </p>
